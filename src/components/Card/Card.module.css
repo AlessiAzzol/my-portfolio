@@ -1,0 +1,24 @@
+.card {
+	border: 1px solid hsl(0, 8%, 90%);
+	border-radius: 10px;
+	box-shadow: var(--box-shadow);
+	margin: 10px;
+	text-align: center;
+	max-width: 250px;
+	display: inline-block;
+}
+
+.cardImg{
+	max-width: 60%;
+	height: auto;
+	border-radius: 50%;
+}
+
+.card .cardTitle {
+	
+}
+
+.card .cardText {
+	
+}
+

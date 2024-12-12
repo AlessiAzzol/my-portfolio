@@ -1,0 +1,28 @@
+.sidenav {
+	background-color: var(--cyclamen-color); /* Colore di sfondo */
+	padding: 10px; 
+	position: fixed; 
+	display: flex; 
+	flex-direction: column; 
+	justify-content: flex-start; 
+	width: 200px; 
+	height: 100%; 		
+	box-shadow: var(--box-shadow);
+  }
+
+  .sidenav ul {
+	list-style-type: none; 
+	padding: 0; 
+	margin: 0;
+  }
+
+  
+  .sidenav a {
+	text-decoration: none; /* Rimuove la sottolineatura */
+	font-size: 18px; /* Dimensione del testo */
+  }
+  
+  .sidenav a:hover {
+	background-color: var(--cyclamen-shadow); /* Colore di hover per i link */
+  }
+  

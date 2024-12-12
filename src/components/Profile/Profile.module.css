@@ -1,0 +1,9 @@
+.profileImg{
+	width: 200px;
+	aspect-ratio: 1;
+	background-image: url(../../assets/img/profile.jpg);
+	border-radius: 50%;
+	background-position: center;
+	background-size: cover;
+	filter: drop-shadow(var(--box-shadow));
+}
