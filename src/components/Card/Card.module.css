@@ -1,11 +1,19 @@
 .card {
-	border: 1px solid hsl(0, 8%, 90%);
 	border-radius: 10px;
-	box-shadow: var(--box-shadow);
 	margin: 10px;
 	text-align: center;
 	max-width: 250px;
 	display: inline-block;
+	-webkit-transition: background-color 1s ease-out;
+	-moz-transition: background-color 1s ease-out;
+	-o-transition: background-color 1s ease-out;
+	transition: background-color 1s ease-out;
+}
+
+.card:hover{
+	background-color: rgb(var(--var-color), 0.8);
+	transform: scale(1.05);
+	color: var(--seasalt-color);
 }
 
 .cardImg{

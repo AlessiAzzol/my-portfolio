@@ -3,9 +3,14 @@ import Body from './components/Body/Body.jsx';
 
 function App() {
 	return (
-		<>	<Sidenav/>
-			<Body/>
-		</>
+		<div className="container">
+			<div className="left">
+				<Sidenav />
+			</div>
+			<div className="right">
+				<Body />
+			</div>
+		</div>
 	);
 }
 

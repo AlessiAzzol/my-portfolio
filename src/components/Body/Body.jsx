@@ -7,8 +7,8 @@ import Profile from '../Profile/Profile.jsx';
 
 function Body() {
 	return (
-		<div className={style.body}>	
-			<Header />
+		<div className={style.body}>			
+			{/* <Header /> */}
 			<Card title='Project 1' text='This is my first project' btnTxt='See more'/>
 			<Card title='Project 2' text='This is my second project' btnTxt='See less' />	
 			<TextArea/>		

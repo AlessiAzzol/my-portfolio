@@ -5,25 +5,83 @@
 	--naples-yellow-shadow: #F5CC00;
 	--seasalt-color: #F9F9F9;
 	--skyblue-color: #7FC8F8;
-	--argentinian-color: #5AA9E6;	
+	--argentinian-color: #5AA9E6;
 	--argentinian-shadow: #1B70B1;
 	--text-color: #060237;
 	--border-color: #E0E0E0;
 	--font-family: 'Parkinsans';
 	--box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.3);
+	--box-shadow-3d: rgba(var(--var-color), 0.17) 0px -23px 25px 0px inset, rgba(var(--var-color), 0.15) 0px -36px 30px 0px inset, rgba(var(--var-color), 0.1) 0px -79px 40px 0px inset, rgba(var(--var-color), 0.06) 0px 2px 1px, rgba(var(--var-color), 0.09) 0px 4px 2px, rgba(var(--var-color), 0.09) 0px 8px 4px, rgba(var(--var-color), 0.09) 0px 16px 8px, rgba(var(--var-color), 0.09) 0px 32px 16px;
+	--box-shadow-strong: rgb(38, 57, 77) 0px 20px 30px -10px;
+	--box-shadow-block: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+	--var-color: 110, 38, 38;
 }
 
 body {
 	font-family: var(--font-family);
-	background-color: var(--seasalt-color);
-	color:var(--text-color);
-	margin: 0;
+	background-image: url(./assets/img/003.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: var(--text-color);
+	/*overflow: hidden;*/
+
 }
+
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.left {
+	width: 15%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.right {
+	width: 85%;
+}
+
+.circle {
+	border-radius: 50%;
+	border-color: transparent;
+	box-shadow: var(--box-shadow);
+	background-color: var(--naples-yellow-color);
+	font-size: xx-large;
+	font-family: 'Bonbon';
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	aspect-ratio: 1;
+	text-align: center;
+	cursor: pointer;
+}
+
+.glass {
+	backdrop-filter: saturate(200%) blur(1px);
+	box-shadow: var(--box-shadow-3d);
+	/*background-image: linear-gradient(to bottom right, transparent, var(--seasalt-color));*/
+	background-image: repeating-linear-gradient(45deg, transparent, #05101000 100px, #2b374c14 200px)
+}
+
 
 
 @font-face {
 	font-family: 'Parkinsans';
 	src: url('./assets/fonts/Parkinsans/Parkinsans-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Bonbon';
+	src: url('./assets/fonts/Bonbon.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }

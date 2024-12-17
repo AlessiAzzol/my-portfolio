@@ -1,0 +1,18 @@
+li {
+	text-decoration: none;
+	padding: 5px 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+.tooltip{
+	position: absolute;
+	left: 90px;
+	transform: translateY(-60%);
+	background: blue;
+	height: 35px;
+	width: 122px;
+	border-radius: 30px;
+}
