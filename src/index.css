@@ -26,27 +26,9 @@
 	width: 85%;
 }
 
-.circle {
-	border-radius: 50%;
-	border-color: transparent;
-	box-shadow: var(--box-shadow);
-	background-color: var(--naples-yellow-color);
-	font-size: xx-large;
-	font-family: 'Bonbon';
-	font-weight: bold;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 50px;
-	aspect-ratio: 1;
-	text-align: center;
-	cursor: pointer;
-}
-
 .glass {
 	backdrop-filter: saturate(200%) blur(1px);
 	box-shadow: var(--box-shadow-3d);
-	/*background-image: linear-gradient(to bottom right, transparent, var(--seasalt-color));*/
 	background-image: repeating-linear-gradient(45deg, transparent, #05101000 100px, #2b374c14 200px)
 }
 
