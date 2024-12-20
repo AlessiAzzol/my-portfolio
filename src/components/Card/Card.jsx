@@ -1,18 +1,27 @@
 import projPic from '../../assets/img/obiettivo.png'
-import Button from '../Button/Button'
+import Button from '@mui/material/Button';
 import style from './Card.module.css'
 
-function Card(props) {
+import { Card, CardMedia, CardContent, CardActions, Typography } from '@mui/material';
+
+function myCard(props) {
 	return (
-		<div className={`${style.card} glass`}>
-			<img className={style.cardImg} src={projPic}></img>
-			<h2 className={style.cardTitle} >{props.title}</h2>
-			<p className={style.cardText} >{props.text}</p>			
-			<Button text={props.btnTxt} ></Button>
-		</div>
-		
+		<Card>
+			<CardMedia image={props.img} />
+			<CardContent>
+				<Typography gutterBottom variant="h5" component="div">
+					{props.title}
+				</Typography>
+				<Typography variant="body2" >
+					{props.text}
+				</Typography>
+			</CardContent>
+			<CardActions>
+				<Button size="small">{props.btnTxt}</Button>
+			</CardActions>
+		</Card>
 	);
 }
 
 
-export default Card
+export default myCard

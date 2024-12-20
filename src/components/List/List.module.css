@@ -3,16 +3,19 @@ li {
 	padding: 5px 0;
 }
 
-a {
-	text-decoration: none;
+
+.tooltip {
+	background: var(--seasalt-color) !important;
+	border-radius: 10px !important;
+	box-shadow: var(--box-shadow-3d) !important;
+	/*font-size: medium !important;*/
+	color: var(--text-color) !important;
+	font-family: var(--font-family) !important;
+	text-align: center;
+	padding: 10px !important;
 }
 
-.tooltip{
-	position: absolute;
-	left: 90px;
-	transform: translateY(-60%);
-	background: blue;
-	height: 35px;
-	width: 122px;
-	border-radius: 30px;
+.arrow::before {
+	background: var(--seasalt-color) !important;
+	box-shadow: var(--box-shadow-3d) !important;
 }
