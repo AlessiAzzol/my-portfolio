@@ -11,6 +11,7 @@ import Body from './pages/Body/Body.jsx';
 import Resume from './pages/Resume/Resume.jsx';
 
 import profile from './assets/img/profile.jpg';
+import { WidthFull } from '@mui/icons-material';
 
 function App() {
 
@@ -22,10 +23,10 @@ function App() {
 					justifyContent: "center",
 					alignItems: "center",
 				}}>
-				<Grid size={4}>
+				<Grid >
 					<Sidenav img={profile} />
 				</Grid>
-				<Grid size={8} style={{ backgroundColor: 'red' }}>
+				<Grid style={{ backgroundColor: 'red', width: '60%' }}>
 					<Header />
 					<Router>
 						<Routes>

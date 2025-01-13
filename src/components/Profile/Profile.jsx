@@ -15,7 +15,7 @@ function Profile(props) {
 				<CustomTimeline children={resumeData.profile.menu} />
 			</CardContent>
 			<CardActions>
-				<Button size="small">download</Button>
+				<Button size="small">{resumeData.profile.textBtn} {resumeData.profile.iconBtn}</Button>
 			</CardActions>
 		</Card>
 	);

@@ -82,10 +82,10 @@ theme = createTheme(theme, {
 		MuiCard: {
 			styleOverrides: {
 				root: {
-					backdropFilter: 'saturate(200%) blur(1px)',
+					backdropFilter: 'saturate(200%) blur(10px)',
 					backgroundColor: 'transparent',
 					boxShadow: theme.shadows[2],
-					backgroundImage: ' repeating-linear-gradient(45deg, transparent, #05101000 100px, #2b374c14 200px)',
+					backgroundImage: ' repeating-linear-gradient(50deg, transparent, #05101000 100px, #2b374c14 250px)',
 
 				}
 			}
