@@ -1,27 +1,43 @@
-import Sidenav from './components/Sidenav/Sidenav.jsx';
-import Body from './components/Body/Body.jsx';
+
 import React, { useState } from 'react';
 import theme from './theme/Theme.jsx';
 import { ThemeProvider, CssBaseline, Box, Stack } from '@mui/material';
+import Grid from '@mui/material/Grid2';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Footer from './components/Footer/Footer.jsx';
+import Header from './components/Header/Header.jsx';
+import Sidenav from './components/Profile/Profile.jsx';
+import Body from './pages/Body/Body.jsx';
+import Resume from './pages/Resume/Resume.jsx';
 
+import profile from './assets/img/profile.jpg';
 
 function App() {
 
 	return (
 		<ThemeProvider theme={theme}>
 			<CssBaseline />
-			<Stack direction="row" spacing={2}
-				sx={{
-					justifyContent: "space-around",
+			<Grid container
+				style={{
+					justifyContent: "center",
 					alignItems: "center",
-					width: "100%",
 				}}>
-				<Box component={Sidenav}>
+				<Grid size={4}>
+					<Sidenav img={profile} />
+				</Grid>
+				<Grid size={8} style={{ backgroundColor: 'red' }}>
+					<Header />
+					<Router>
+						<Routes>
+							<Route path="/my-portfolio" index element={<Body />} />
+							<Route path="/my-portfolio" element={<Resume />} />
+						</Routes>
+					</Router>
+					<Footer />
+				</Grid>
 
-				</Box>
-				<Box component={Body} />
-			</Stack>
-		</ThemeProvider>
+			</Grid>
+		</ThemeProvider >
 		/*
 		<div className="container">
 			<div className="left">
@@ -31,6 +47,17 @@ function App() {
 				<Body />
 			</div>
 		</div>*/
+
+
+		/*<Stack direction="row" spacing={2}
+				sx={{
+					justifyContent: "space-between",
+					alignItems: "center",
+					width: "100%",
+				}}>
+				<Box component={Sidenav} />
+				<Box component={Body} />
+			</Stack>*/
 	);
 }
 

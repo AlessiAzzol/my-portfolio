@@ -19,11 +19,18 @@ let theme = createTheme({
 
 	typography: {
 		fontFamily: 'Parkinsans',
+		fontSize: 12,
 	},
 
 	textColor: {
 		glass: {
 			primary: 'rgb(2, 4, 45)',
+			secondary: '#F9F9F9',
+		},
+	},
+	iconColor: {
+		glass: {
+			primary: 'rgb( 110, 38, 38, 1)',
 			secondary: '#F9F9F9',
 		},
 	},
@@ -35,56 +42,16 @@ let theme = createTheme({
 	},
 
 	components: {
-		MuiFab: {
-			styleOverrides: {
-				root: {
-					fontFamily: 'Bonbon',
-					fontWeight: 'bold',
-					fontSize: 'xx-large',
-					width: 50,
-					height: 50,
-				}
-			}
-		},
-		MuiDrawer: {
-			styleOverrides: {
-				paper: {
-					display: 'flex',
-					flexDirection: 'column',
-					alignItems: 'center',
-					borderRadius: 100,
-					margin: 10,
-				}
-			}
-		},
-		MuiListItemButton: {
-			styleOverrides: {
-				root: {
-					borderRadius: 50,
-				}
-
-			}
-		},
-
 		MuiCard: {
 			styleOverrides: {
 				root: {
 					borderRadius: 10,
 					margin: 10,
-					width: 200,
-					height: 400,
-					display: 'inline-block',
-					alignItems: 'center',
+					width: 280,
 				}
 			}
 		},
-		MuiCardMedia: {
-			styleOverrides: {
-				root: {
-					height: 140,
-				}
-			}
-		},
+
 	}
 });
 
@@ -101,25 +68,6 @@ theme = createTheme(theme, {
 				},
 			}),
 		},
-		MuiDrawer: {
-			styleOverrides: {
-				paper: {
-					backdropFilter: 'saturate(200%) blur(1px)',
-					backgroundColor: 'transparent',
-					boxShadow: theme.shadows[2],
-					backgroundImage: ' repeating-linear-gradient(45deg, transparent, #05101000 100px, #2b374c14 200px)',
-				}
-			}
-		},
-		MuiListItemButton: {
-			styleOverrides: {
-				root: {
-					backgroundColor: 'rgb( 110, 38, 38, 0.6)',
-					boxShadow: theme.shadows[2],
-					color: theme.textColor.glass.secondary,
-				}
-			}
-		},
 		MuiButton: {
 			styleOverrides: {
 				root: {
@@ -131,14 +79,6 @@ theme = createTheme(theme, {
 				}
 			}
 		},
-		MuiListItemIcon: {
-			styleOverrides: {
-				root: {
-					color: theme.textColor.glass.secondary,
-				}
-			}
-		},
-
 		MuiCard: {
 			styleOverrides: {
 				root: {
@@ -150,6 +90,28 @@ theme = createTheme(theme, {
 				}
 			}
 		},
+		MuiTimelineDot: {
+			styleOverrides: {
+				root: {
+					backgroundColor: theme.iconColor.glass.primary,
+				}
+			}
+		},
+		MuiAvatar: {
+			styleOverrides: {
+				root: {
+					backgroundColor: theme.iconColor.glass.primary,
+				}
+			}
+		},
+		MuiTimelineConnector: {
+			styleOverrides: {
+				root: {
+					backgroundColor: theme.iconColor.glass.primary,
+				}
+			}
+		},
+
 	}
 });
 
