@@ -1,5 +1,4 @@
-import { Box, Typography, Card } from '@mui/material';
-import { Outlet } from "react-router-dom";
+import { Typography, Card } from '@mui/material';
 
 function Resume() {
 	return (

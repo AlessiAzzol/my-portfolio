@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-
 import { Card, CardHeader, CardMedia, CardContent, CardActions, Button, Avatar } from '@mui/material';
 import CustomTimeline from '../Timeline/CustomTimeline.jsx';
 import resumeData from '../../utils/resumeData.jsx';
