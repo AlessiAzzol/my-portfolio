@@ -1,23 +1,15 @@
 
-import style from './Body.module.css';
-import img1 from '../../assets/img/obiettivo.png';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, Card } from '@mui/material';
 
 function Body() {
 	return (
-		<div >
-			<Box>
-				<Typography variant="h1" gutterBottom>
-					Alessia Azzolina
-				</Typography>
-				<Typography variant="h2" gutterBottom>
-					Software Developer
-				</Typography>
 
-			</Box>
+		<Card sx={{ width: '100%', height: '70vh', margin: 0, marginTop: 3, padding: 0 }}>
+			<Typography variant="h1">PORTFOLIO</Typography>
+		</Card>
 
 
-		</div>
+
 	);
 }
 

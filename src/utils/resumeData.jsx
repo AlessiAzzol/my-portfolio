@@ -18,6 +18,12 @@ export default {
 		],
 		textBtn: "download CV ",
 		iconBtn: <FileDownloadIcon sx={{ marginLeft: "10px" }} fontSize="small" />,
+	},
+	header: {
+		pages: [
+			{ title: "Resume", href: "/my-portfolio" },
+			{ title: "Portfolio", href: "/my-portfolio/portfolio" },
+		],
 	}
 
 }

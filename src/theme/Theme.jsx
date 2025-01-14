@@ -34,6 +34,12 @@ let theme = createTheme({
 			secondary: '#F9F9F9',
 		},
 	},
+	btnColor: {
+		glass: {
+			primary: 'rgb( 110, 38, 38, 0.6)',
+			secondary: '#F9F9F9',
+		},
+	},
 
 	background: {
 		glass: {
@@ -48,6 +54,14 @@ let theme = createTheme({
 					borderRadius: 10,
 					margin: 10,
 					width: 280,
+				}
+			}
+		},
+		MuiAppBar: {
+			styleOverrides: {
+				root: {
+					borderRadius: 10,
+
 				}
 			}
 		},
@@ -87,6 +101,15 @@ theme = createTheme(theme, {
 					boxShadow: theme.shadows[2],
 					backgroundImage: ' repeating-linear-gradient(50deg, transparent, #05101000 100px, #2b374c14 250px)',
 
+				}
+			}
+		},
+		MuiAppBar: {
+			styleOverrides: {
+				root: {
+					backdropFilter: 'saturate(200%) blur(5px)',
+					backgroundColor: 'transparent',
+					boxShadow: theme.shadows[2],
 				}
 			}
 		},

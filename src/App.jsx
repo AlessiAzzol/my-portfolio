@@ -9,9 +9,9 @@ import Header from './components/Header/Header.jsx';
 import Sidenav from './components/Profile/Profile.jsx';
 import Body from './pages/Body/Body.jsx';
 import Resume from './pages/Resume/Resume.jsx';
+import Layout from './components/Layout/Layout.jsx';
 
 import profile from './assets/img/profile.jpg';
-import { WidthFull } from '@mui/icons-material';
 
 function App() {
 
@@ -26,12 +26,15 @@ function App() {
 				<Grid >
 					<Sidenav img={profile} />
 				</Grid>
-				<Grid style={{ backgroundColor: 'red', width: '60%' }}>
-					<Header />
+				<Grid style={{ width: '60%' }}>
+
 					<Router>
+
 						<Routes>
-							<Route path="/my-portfolio" index element={<Body />} />
-							<Route path="/my-portfolio" element={<Resume />} />
+							<Route path="/" element={<Layout />}>
+								<Route path="/my-portfolio" index element={<Resume />} />
+								<Route path="/my-portfolio/portfolio" element={<Body />} />
+							</Route>
 						</Routes>
 					</Router>
 					<Footer />
