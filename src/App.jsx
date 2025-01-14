@@ -34,6 +34,7 @@ function App() {
 							<Route path="/" element={<Layout />}>
 								<Route path="/my-portfolio" index element={<Resume />} />
 								<Route path="/my-portfolio/portfolio" element={<Body />} />
+								<Route path="/my-portfolio/contact" element={<Body />} />
 							</Route>
 						</Routes>
 					</Router>

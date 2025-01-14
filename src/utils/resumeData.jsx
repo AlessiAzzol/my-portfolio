@@ -23,6 +23,7 @@ export default {
 		pages: [
 			{ title: "Resume", href: "/my-portfolio" },
 			{ title: "Portfolio", href: "/my-portfolio/portfolio" },
+			{ title: "Contact", href: "/my-portfolio/contact" },
 		],
 	}
 
