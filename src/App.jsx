@@ -6,10 +6,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Footer from './components/Footer/Footer.jsx';
 import Sidenav from './components/Profile/Profile.jsx';
 import Layout from './components/Layout/Layout.jsx';
-import Contact from './pages/Contact/Contact.jsx';
-import Body from './pages/Body/Body.jsx';
-import Resume from './pages/Resume/Resume.jsx';
-
+import Contact from './pages/Contact.jsx';
+import Portfolio from './pages/Portfolio.jsx';
+import Resume from './pages/Resume.jsx';
+import Home from './pages/Home.jsx';
 import profile from './assets/img/profile.jpg';
 
 function App() {
@@ -17,27 +17,27 @@ function App() {
 	return (
 		<ThemeProvider theme={theme}>
 			<CssBaseline />
-			<Grid container
-				style={{
-					justifyContent: "center",
-					alignItems: "center",
-				}}>
-				<Grid >
+			<Grid container rowSpacing={1} columnSpacing={1} sx={{ height: "100vh" }}>
+				<Grid item="true" size={3}>
 					<Sidenav img={profile} />
 				</Grid>
-				<Grid style={{ width: '60%' }}>
+				<Grid item="true" size={9}>
 
 					<Router>
 						<Routes>
 							<Route path="/" element={<Layout />}>
-								<Route path="/my-portfolio" index element={<Resume />} />
-								<Route path="/my-portfolio/portfolio" element={<Body />} />
+								<Route path="/my-portfolio" index element={<Home />} />
+								<Route path="/my-portfolio/resume" element={<Resume />} />
+								<Route path="/my-portfolio/portfolio" element={<Portfolio />} />
 								<Route path="/my-portfolio/contact" element={<Contact />} />
 							</Route>
 						</Routes>
 					</Router>
+				</Grid>
+				<Grid item="true" size={12}>
 					<Footer />
 				</Grid>
+
 			</Grid>
 		</ThemeProvider >
 	);

@@ -1,8 +1,8 @@
-function Footer(){
+function Footer() {
 	return (
-		<footer style={{ textAlign: 'right'}}>
+		<footer style={{ textAlign: 'right' }} >
 			<p>&copy; {new Date().getFullYear()} - Alessia Azzolina</p>
-		</footer>
+		</ footer>
 	);
 }
 

@@ -20,6 +20,9 @@ let theme = createTheme({
 	typography: {
 		fontFamily: 'Parkinsans',
 		fontSize: 12,
+		h6: {
+			fontWeight: "bold",
+		},
 	},
 
 	textColor: {
@@ -53,7 +56,7 @@ let theme = createTheme({
 				root: {
 					borderRadius: 10,
 					margin: 10,
-					width: 280,
+
 				}
 			}
 		},

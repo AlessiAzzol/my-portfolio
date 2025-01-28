@@ -18,15 +18,19 @@ function CustomTimeline({ children }) {
 				<TimelineItem key={index} >
 					<TimelineSeparator>
 						<TimelineDot sx={{ margin: "0", }}>{child.icon}</TimelineDot>
-						<TimelineConnector />
+						{index !== children.length - 1 && (
+							<TimelineConnector />
+						)}
 					</TimelineSeparator>
-					<TimelineContent color="textSecondary">
+					<TimelineContent sx={{ paddingTop: "0", }} color="textSecondary">
 						<Typography><strong>{child.title}</strong></Typography>
+						<Typography variant="caption"><em>{child.date}</em></Typography>
 						<Typography>{child.content}</Typography>
 					</TimelineContent>
 				</TimelineItem>
-			))}
-		</Timeline>
+			))
+			}
+		</Timeline >
 	);
 }
 
