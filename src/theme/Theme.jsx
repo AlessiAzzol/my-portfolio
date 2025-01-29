@@ -1,7 +1,10 @@
 import { createTheme, responsiveFontSizes } from '@mui/material';
-import backgroundImage from '../assets/img/003.jpg';
+import warmImage from '../assets/img/057.jpg';
+import coldImage from '../assets/img/061.jpg';
+import flowersImage from '../assets/img/003.jpg';
 
-let theme = createTheme({
+
+const baseTheme = createTheme({
 	palette: {
 		primary: {
 			main: 'rgba(110, 38, 38, 0.17)',
@@ -9,6 +12,7 @@ let theme = createTheme({
 		secondary: {
 			main: '#F5CC00',
 		},
+
 	},
 	shadows: [
 		...createTheme().shadows.slice(0, 1),
@@ -16,7 +20,6 @@ let theme = createTheme({
 		'rgba(110, 38, 38, 0.17) 0px -23px 25px 0px inset, rgba(110, 38, 38, 0.15) 0px -36px 30px 0px inset, rgba(110, 38, 38, 0.1) 0px -79px 40px 0px inset, rgba(110, 38, 38, 0.06) 0px 2px 1px, rgba(110, 38, 38, 0.09) 0px 4px 2px, rgba(110, 38, 38, 0.09) 0px 8px 4px, rgba(110, 38, 38, 0.09) 0px 16px 8px, rgba(110, 38, 38, 0.09) 0px 32px 16px',
 		...createTheme().shadows.slice(3),
 	],
-
 	typography: {
 		fontFamily: 'Parkinsans',
 		fontSize: 12,
@@ -24,117 +27,58 @@ let theme = createTheme({
 			fontWeight: "bold",
 		},
 	},
-
-	textColor: {
-		glass: {
-			primary: 'rgb(2, 4, 45)',
-			secondary: '#F9F9F9',
-		},
-	},
-	iconColor: {
-		glass: {
-			primary: 'rgb( 110, 38, 38, 1)',
-			secondary: '#F9F9F9',
-		},
-	},
-	btnColor: {
-		glass: {
-			primary: 'rgb( 110, 38, 38, 0.6)',
-			secondary: '#F9F9F9',
-		},
-	},
-
-	background: {
-		glass: {
-			primary: `url(${backgroundImage})`,
-		}
-	},
-
 	components: {
-		MuiCard: {
-			styleOverrides: {
-				root: {
-					borderRadius: 10,
-					margin: 10,
-
-				}
-			}
-		},
-		MuiAppBar: {
-			styleOverrides: {
-				root: {
-					borderRadius: 10,
-
-				}
-			}
-		},
-
-	}
-});
-
-theme = createTheme(theme, {
-	components: {
-		MuiCssBaseline: {
-			styleOverrides: () => ({
-				body: {
-					backgroundPosition: 'center',
-					backgroundRepeat: 'no-repeat',
-					backgroundSize: 'cover',
-					backgroundImage: theme.background.glass.primary,
-					color: theme.textColor.glass.primary,
-				},
-			}),
-		},
 		MuiButton: {
 			styleOverrides: {
-				root: {
+				root: ({ theme }) => ({
 					backgroundColor: 'rgb( 110, 38, 38, 0.6)',
 					boxShadow: theme.shadows[2],
-					color: theme.textColor.glass.secondary,
+					color: theme.custom.btnColor.secondary,
 					borderRadius: 50,
 					padding: 10,
-				}
-			}
+				}),
+			},
 		},
 		MuiCard: {
 			styleOverrides: {
-				root: {
+				root: ({ theme }) => ({
 					backdropFilter: 'saturate(200%) blur(10px)',
 					backgroundColor: 'transparent',
 					boxShadow: theme.shadows[2],
 					backgroundImage: ' repeating-linear-gradient(50deg, transparent, #05101000 100px, #2b374c14 250px)',
 
-				}
+				}),
 			}
 		},
 		MuiAppBar: {
 			styleOverrides: {
-				root: {
+				root: ({ theme }) => ({
 					backdropFilter: 'saturate(200%) blur(5px)',
 					backgroundColor: 'transparent',
 					boxShadow: theme.shadows[2],
-				}
+					borderRadius: 10,
+				}),
 			}
 		},
 		MuiTimelineDot: {
 			styleOverrides: {
-				root: {
-					backgroundColor: theme.iconColor.glass.primary,
-				}
+				root: ({ theme }) => ({
+					backgroundColor: theme.custom.iconColor.primary,
+				}),
 			}
 		},
 		MuiAvatar: {
 			styleOverrides: {
-				root: {
-					backgroundColor: theme.iconColor.glass.primary,
-				}
+				root: ({ theme }) => ({
+					backgroundColor: theme.custom.iconColor.primary,
+				}),
 			}
 		},
 		MuiTimelineConnector: {
 			styleOverrides: {
-				root: {
-					backgroundColor: theme.iconColor.glass.primary,
-				}
+				root: ({ theme }) => ({
+					backgroundColor: theme.custom.iconColor.primary,
+				}),
 			}
 		},
 
@@ -142,4 +86,60 @@ theme = createTheme(theme, {
 });
 
 
-export default responsiveFontSizes(theme);
+const warmTheme = createTheme({
+	...baseTheme,
+	custom: {
+		iconColor: {
+			primary: 'blue',
+			secondary: '#F9F9F9',
+		},
+		btnColor: {
+			primary: 'red',
+			secondary: '#F9F9F9',
+
+		},
+
+		background: `url(${warmImage})`,
+
+	},
+
+});
+
+const coldTheme = createTheme({
+	...baseTheme,
+	custom: {
+		iconColor: {
+			primary: 'rgb( 110, 38, 38, 1)',
+			secondary: '#F9F9F9',
+		},
+		btnColor: {
+			primary: 'rgb( 110, 38, 38, 0.6)',
+			secondary: '#F9F9F9',
+		},
+		background: `url(${coldImage})`,
+
+	},
+});
+
+const flowers = createTheme({
+	...baseTheme,
+	custom: {
+		iconColor: {
+			primary: 'rgb( 110, 38, 38, 1)',
+			secondary: '#F9F9F9',
+		},
+		btnColor: {
+			primary: 'rgb( 110, 38, 38, 0.6)',
+			secondary: '#F9F9F9',
+		},
+		background: `url(${flowersImage})`,
+
+	},
+
+});
+
+export const themes = {
+	warm: responsiveFontSizes(warmTheme),
+	cold: responsiveFontSizes(coldTheme),
+	flowers: responsiveFontSizes(flowers),
+};

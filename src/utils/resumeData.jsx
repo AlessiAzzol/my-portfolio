@@ -6,6 +6,13 @@ import PublicIcon from '@mui/icons-material/Public';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 
 export default {
+	settings: {
+		themes: [
+			{ name: "warm", value: "warm" },
+			{ name: "cold", value: "cold" },
+			{ name: "flowers", value: "flowers" },
+		],
+	},
 	profile: {
 		title: "ALESSIA AZZOLINA",
 		subheader: "Software Developer",

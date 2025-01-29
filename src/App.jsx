@@ -1,6 +1,6 @@
 
-import theme from './theme/Theme.jsx';
 import { ThemeProvider, CssBaseline, } from '@mui/material';
+import ThemeProviderWrapper from './theme/ThemeContext.jsx';
 import Grid from '@mui/material/Grid2';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Footer from './components/Footer/Footer.jsx';
@@ -15,9 +15,17 @@ import profile from './assets/img/profile.jpg';
 function App() {
 
 	return (
-		<ThemeProvider theme={theme}>
+		<ThemeProviderWrapper>
 			<CssBaseline />
-			<Grid container rowSpacing={1} columnSpacing={1} sx={{ height: "100vh" }}>
+			<Grid container rowSpacing={1} columnSpacing={2}
+				sx={{
+					height: "100vh",
+					backgroundImage: (theme) => theme.custom.background,
+					backgroundPosition: 'center',
+					backgroundRepeat: 'no-repeat',
+					backgroundSize: 'cover',
+					padding: 3,
+				}}>
 				<Grid item="true" size={3}>
 					<Sidenav img={profile} />
 				</Grid>
@@ -39,7 +47,7 @@ function App() {
 				</Grid>
 
 			</Grid>
-		</ThemeProvider >
+		</ThemeProviderWrapper >
 	);
 }
 
