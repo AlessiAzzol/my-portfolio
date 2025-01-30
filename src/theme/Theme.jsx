@@ -1,7 +1,8 @@
 import { createTheme, responsiveFontSizes } from '@mui/material';
-import warmImage from '../assets/img/057.jpg';
-import coldImage from '../assets/img/061.jpg';
-import flowersImage from '../assets/img/003.jpg';
+import cloudImg from '../assets/img/cloud08.jpg';
+import fantasyImg from '../assets/img/fantasy10.jpg';
+import flowerImg from '../assets/img/flower04.jpg';
+import leafImg from '../assets/img/leaf15.jpg';
 
 
 const baseTheme = createTheme({
@@ -14,12 +15,6 @@ const baseTheme = createTheme({
 		},
 
 	},
-	shadows: [
-		...createTheme().shadows.slice(0, 1),
-		'2px 0px 5px rgba(0, 0, 0, 0.3)',
-		'rgba(110, 38, 38, 0.17) 0px -23px 25px 0px inset, rgba(110, 38, 38, 0.15) 0px -36px 30px 0px inset, rgba(110, 38, 38, 0.1) 0px -79px 40px 0px inset, rgba(110, 38, 38, 0.06) 0px 2px 1px, rgba(110, 38, 38, 0.09) 0px 4px 2px, rgba(110, 38, 38, 0.09) 0px 8px 4px, rgba(110, 38, 38, 0.09) 0px 16px 8px, rgba(110, 38, 38, 0.09) 0px 32px 16px',
-		...createTheme().shadows.slice(3),
-	],
 	typography: {
 		fontFamily: 'Parkinsans',
 		fontSize: 12,
@@ -31,7 +26,7 @@ const baseTheme = createTheme({
 		MuiButton: {
 			styleOverrides: {
 				root: ({ theme }) => ({
-					backgroundColor: 'rgb( 110, 38, 38, 0.6)',
+					backgroundColor: theme.custom.btnColor.primary,
 					boxShadow: theme.shadows[2],
 					color: theme.custom.btnColor.secondary,
 					borderRadius: 50,
@@ -86,27 +81,112 @@ const baseTheme = createTheme({
 });
 
 
-const warmTheme = createTheme({
+const cloudTheme = createTheme({
 	...baseTheme,
+	shadows: [
+		...createTheme().shadows.slice(0, 1),
+		"2px 0px 5px rgba(0, 0, 0, 0.3)",
+		`rgba(255, 255, 255, 0.17) 0px -23px 25px 0px inset, 
+			 rgba(255, 255, 255, 0.15) 0px -36px 30px 0px inset,
+			 rgba(255, 255, 255, 0.1) 0px -79px 40px 0px inset,
+			 rgba(255, 255, 255, 0.06) 0px 2px 1px,
+			 rgba(255, 255, 255, 0.09) 0px 4px 2px, 
+			 rgba(255, 255, 255, 0.09) 0px 8px 4px,
+			 rgba(255, 255, 255, 0.09) 0px 16px 8px,
+			 rgba(255, 255, 255, 0.09) 0px 32px 16px`,
+		...createTheme().shadows.slice(3),
+	],
 	custom: {
 		iconColor: {
-			primary: 'blue',
+			primary: '#394149;',
 			secondary: '#F9F9F9',
 		},
 		btnColor: {
-			primary: 'red',
-			secondary: '#F9F9F9',
+			primary: '#54708f73;',
+			secondary: '#394149;',
 
 		},
 
-		background: `url(${warmImage})`,
+		background: `url(${cloudImg})`,
 
 	},
 
 });
 
-const coldTheme = createTheme({
+const fantasyTheme = createTheme({
 	...baseTheme,
+	shadows: [
+		...createTheme().shadows.slice(0, 1),
+		"2px 0px 5px rgba(0, 0, 0, 0.3)",
+		`rgba(38, 80, 110, 0.17) 0px -23px 25px 0px inset, 
+			 rgba(38, 80, 110, 0.15) 0px -36px 30px 0px inset,
+			 rgba(38, 80, 110, 0.1) 0px -79px 40px 0px inset,
+			 rgba(38, 80, 110, 0.06) 0px 2px 1px,
+			 rgba(38, 80, 110, 0.09) 0px 4px 2px, 
+			 rgba(38, 80, 110, 0.09) 0px 8px 4px,
+			 rgba(38, 80, 110, 0.09) 0px 16px 8px,
+			 rgba(38, 80, 110, 0.09) 0px 32px 16px`,
+		...createTheme().shadows.slice(3),
+	],
+	custom: {
+		iconColor: {
+			primary: 'rgb( 6, 16, 88, 1)',
+			secondary: '#F9F9F9',
+		},
+		btnColor: {
+			primary: 'rgb( 6, 16, 88, 0.6)',
+			secondary: '#F9F9F9',
+		},
+		background: `url(${fantasyImg})`,
+	},
+
+});
+
+const leafTheme = createTheme({
+	...baseTheme,
+	shadows: [
+		...createTheme().shadows.slice(0, 1),
+		"2px 0px 5px rgba(0, 0, 0, 0.3)",
+		`rgba(38, 110, 97, 0.17) 0px -23px 25px 0px inset, 
+			 rgba(38, 110, 97, 0.15) 0px -36px 30px 0px inset,
+			 rgba(38, 110, 97, 0.1) 0px -79px 40px 0px inset,
+			 rgba(38, 110, 97, 0.06) 0px 2px 1px,
+			 rgba(38, 110, 97, 0.09) 0px 4px 2px, 
+			 rgba(38, 110, 97, 0.09) 0px 8px 4px,
+			 rgba(38, 110, 97, 0.09) 0px 16px 8px,
+			 rgba(38, 110, 97, 0.09) 0px 32px 16px`,
+		...createTheme().shadows.slice(3),
+	],
+	custom: {
+		iconColor: {
+			primary: 'rgb(26, 90, 84)',
+			secondary: '#F9F9F9',
+		},
+		btnColor: {
+			primary: 'rgb( 26, 90, 84, 0.6)',
+			secondary: '#F9F9F9',
+		},
+		background: `url(${leafImg})`,
+
+	},
+
+});
+
+const flowerTheme = createTheme({
+	...baseTheme,
+	shadows: [
+		...createTheme().shadows.slice(0, 1),
+		"2px 0px 5px rgba(0, 0, 0, 0.3)",
+		`rgba(110, 38, 38, 0.17) 0px -23px 25px 0px inset, 
+			 rgba(110, 38, 38, 0.15) 0px -36px 30px 0px inset,
+			 rgba(110, 38, 38, 0.1) 0px -79px 40px 0px inset,
+			 rgba(110, 38, 38, 0.06) 0px 2px 1px,
+			 rgba(110, 38, 38, 0.09) 0px 4px 2px, 
+			 rgba(110, 38, 38, 0.09) 0px 8px 4px,
+			 rgba(110, 38, 38, 0.09) 0px 16px 8px,
+			 rgba(110, 38, 38, 0.09) 0px 32px 16px`,
+		...createTheme().shadows.slice(3),
+	],
 	custom: {
 		iconColor: {
 			primary: 'rgb( 110, 38, 38, 1)',
@@ -116,30 +196,15 @@ const coldTheme = createTheme({
 			primary: 'rgb( 110, 38, 38, 0.6)',
 			secondary: '#F9F9F9',
 		},
-		background: `url(${coldImage})`,
-
-	},
-});
-
-const flowers = createTheme({
-	...baseTheme,
-	custom: {
-		iconColor: {
-			primary: 'rgb( 110, 38, 38, 1)',
-			secondary: '#F9F9F9',
-		},
-		btnColor: {
-			primary: 'rgb( 110, 38, 38, 0.6)',
-			secondary: '#F9F9F9',
-		},
-		background: `url(${flowersImage})`,
+		background: `url(${flowerImg})`,
 
 	},
 
 });
 
 export const themes = {
-	warm: responsiveFontSizes(warmTheme),
-	cold: responsiveFontSizes(coldTheme),
-	flowers: responsiveFontSizes(flowers),
+	cloud: responsiveFontSizes(cloudTheme),
+	color: responsiveFontSizes(fantasyTheme),
+	leaf: responsiveFontSizes(leafTheme),
+	flowers: responsiveFontSizes(flowerTheme),
 };

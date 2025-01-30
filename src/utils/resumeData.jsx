@@ -8,8 +8,9 @@ import FileDownloadIcon from '@mui/icons-material/FileDownload';
 export default {
 	settings: {
 		themes: [
-			{ name: "warm", value: "warm" },
-			{ name: "cold", value: "cold" },
+			{ name: "cloud", value: "cloud" },
+			{ name: "color", value: "color" },
+			{ name: "leaf", value: "leaf" },
 			{ name: "flowers", value: "flowers" },
 		],
 	},
