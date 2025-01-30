@@ -40,7 +40,7 @@ const baseTheme = createTheme({
 					backdropFilter: 'saturate(200%) blur(10px)',
 					backgroundColor: 'transparent',
 					boxShadow: theme.shadows[2],
-					backgroundImage: ' repeating-linear-gradient(50deg, transparent, #05101000 100px, #2b374c14 250px)',
+					backgroundImage: 'repeating-linear-gradient(50deg, transparent -500px, #2b374c14 150px)',
 
 				}),
 			}
@@ -108,7 +108,6 @@ const cloudTheme = createTheme({
 		},
 
 		background: `url(${cloudImg})`,
-
 	},
 
 });

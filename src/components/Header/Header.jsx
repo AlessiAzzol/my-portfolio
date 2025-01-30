@@ -7,8 +7,8 @@ import ThemeSwitcher from '../../theme/ThemeSwitcher.jsx';
 function Header() {
 	const theme = useTheme();
 	return (
-		<Card>
-			<AppBar position="static">
+		<Card sx={{ marginBottom: 2, }}>
+			<AppBar position="static" sx={{ paddingLeft: 0, }}>
 				<Container maxWidth="xl">
 					<Toolbar disableGutters>
 						<Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
@@ -38,8 +38,9 @@ function Header() {
 										color: 'white',
 										letterSpacing: 1,
 										boxShadow: useLocation().pathname === page.href ? 1 : 0,
+										margin: 1,
 										borderRadius: 1,
-										fontSize: 16,
+										fontSize: 14,
 										backgroundColor: useLocation().pathname === page.href ? theme.custom.btnColor.primary : 'transparent',
 									}}>
 
