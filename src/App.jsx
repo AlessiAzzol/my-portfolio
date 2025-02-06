@@ -29,10 +29,10 @@ function App() {
 						backgroundSize: 'cover',
 						padding: 3,
 					}}>
-					<Grid item="true" size={{ xs: 12, sm: 6, md: 3 }}>
+					<Grid item="true" size={{ xs: 12, sm: 6, md: 3, lg: 2 }}>
 						<Sidenav img={profile} />
 					</Grid>
-					<Grid item="true" size={{ xs: 12, sm: 6, md: 9 }}>
+					<Grid item="true" size={{ xs: 12, sm: 6, md: 9, lg: 10 }}>
 
 						<Router>
 							<Routes>

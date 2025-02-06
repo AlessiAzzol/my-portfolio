@@ -45,16 +45,6 @@ const baseTheme = createTheme({
 				}),
 			}
 		},
-		MuiAppBar: {
-			styleOverrides: {
-				root: ({ theme }) => ({
-					backdropFilter: 'saturate(200%) blur(5px)',
-					backgroundColor: 'transparent',
-					boxShadow: theme.shadows[2],
-					borderRadius: 10,
-				}),
-			}
-		},
 		MuiTimelineDot: {
 			styleOverrides: {
 				root: ({ theme }) => ({
