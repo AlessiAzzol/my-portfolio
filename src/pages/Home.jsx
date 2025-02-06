@@ -1,12 +1,17 @@
 import { Typography, Card } from '@mui/material';
-import resumeData from '../utils/resumeData.jsx';
 import Grid from '@mui/material/Grid2';
+import { useLanguage } from '../context/LanguageContext.jsx';
+
 
 function Home() {
+	const { data } = useLanguage();
+
+	if (!data.pages) return <p>Loading...</p>;
+
 	return (
 		<Card sx={{ padding: 3 }}>
 			<Grid container direction="column" spacing={8}>
-				{resumeData.pages.home.section.map((section) => (
+				{data.pages.home.section.map((section) => (
 					<Grid container key={section.title} spacing={2}>
 						<Grid item="true" >
 							<Typography variant="h6">{section.title}</Typography>

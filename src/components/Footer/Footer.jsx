@@ -1,5 +1,3 @@
-import Card from '@mui/material/Card';
-
 function Footer() {
 	return (
 		<footer style={{ textAlign: 'right' }} >

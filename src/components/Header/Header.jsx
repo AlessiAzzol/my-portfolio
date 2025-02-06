@@ -1,11 +1,17 @@
 import * as React from 'react';
 import { Link, useLocation } from "react-router-dom";
 import { Avatar, Container, Button, Box, useTheme, Toolbar, AppBar, Card } from '@mui/material';
-import resumeData from '../../utils/resumeData.jsx';
-import ThemeSwitcher from '../../theme/ThemeSwitcher.jsx';
+import SettingsSwitcher from './../switcher/SettingSwitcher.jsx';
+import { useLanguage } from "./../../context/LanguageContext.jsx";
 
 function Header() {
+
+	const { data } = useLanguage();
 	const theme = useTheme();
+	console.log(data);
+
+	if (!data.header) return <p>Loading...</p>;
+
 	return (
 		<Card sx={{ marginBottom: 2, }}>
 			<AppBar position="static" sx={{ paddingLeft: 0, }}>
@@ -15,12 +21,12 @@ function Header() {
 							<Button
 								key='home'
 								sx={{
-									boxShadow: useLocation().pathname === resumeData.header.home ? 1 : 0,
+									boxShadow: useLocation().pathname === data.header.home ? 1 : 0,
 									borderRadius: 1,
-									backgroundColor: useLocation().pathname === resumeData.header.home ? theme.custom.btnColor.primary : 'transparent',
+									backgroundColor: useLocation().pathname === data.header.home ? theme.custom.btnColor.primary : 'transparent',
 								}}>
 
-								<Link to={resumeData.header.home} style={{ textDecoration: 'none', color: 'inherit' }}>
+								<Link to={data.header.home} style={{ textDecoration: 'none', color: 'inherit' }}>
 									<Avatar sx={{
 										fontFamily: 'Bonbon',
 										fontWeight: 'bold',
@@ -31,7 +37,7 @@ function Header() {
 								</Link>
 							</Button>
 
-							{resumeData.header.pages.map((page) => (
+							{data.header.pages.map((page) => (
 								<Button
 									key={page.title}
 									sx={{
@@ -49,7 +55,7 @@ function Header() {
 								</Button>
 							))}
 						</Box>
-						<ThemeSwitcher />
+						<SettingsSwitcher />
 					</Toolbar>
 
 				</Container>

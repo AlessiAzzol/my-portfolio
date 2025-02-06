@@ -1,14 +1,15 @@
 
 import { Typography, Card } from '@mui/material';
-import resumeData from '../utils/resumeData.jsx';
+import { useLanguage } from '../context/LanguageContext.jsx';
 
 function Portfolio() {
+	const { data } = useLanguage();
 	return (
 
 		<Card sx={{ padding: 3 }}>
-			<Typography variant="h3">{resumeData.pages.portfolio.title}</Typography>
-			<Typography variant="h5">{resumeData.pages.portfolio.subtitle}</Typography>
-			<Typography >{resumeData.pages.portfolio.description}</Typography>
+			<Typography variant="h3">{data.pages.portfolio.title}</Typography>
+			<Typography variant="h5">{data.pages.portfolio.subtitle}</Typography>
+			<Typography >{data.pages.portfolio.description}</Typography>
 		</Card>
 
 

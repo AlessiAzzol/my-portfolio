@@ -1,6 +1,6 @@
 import { Box, Tooltip, IconButton, Avatar, Menu, MenuItem, Typography } from "@mui/material";
 
-import resumeData from '../utils/resumeData.jsx';
+import resumeData from '../data/resumeData.jsx';
 import * as React from 'react';
 import { useTheme } from "./ThemeContext.jsx";
 
