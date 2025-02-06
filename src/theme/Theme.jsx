@@ -1,8 +1,8 @@
 import { createTheme, responsiveFontSizes } from '@mui/material';
 import cloudImg from '../assets/img/cloud08.jpg';
 import fantasyImg from '../assets/img/fantasy10.jpg';
-import flowerImg from '../assets/img/flower04.jpg';
-import leafImg from '../assets/img/leaf15.jpg';
+import flowerImg from '../assets/img/flower01.jpg';
+import leafImg from '../assets/img/leaf06.jpg';
 
 
 const baseTheme = createTheme({
@@ -38,7 +38,7 @@ const baseTheme = createTheme({
 			styleOverrides: {
 				root: ({ theme }) => ({
 					backdropFilter: 'saturate(200%) blur(10px)',
-					backgroundColor: 'transparent',
+					backgroundColor: 'transparent',     //'transparent',  //'rgba(255, 255, 255, 0.5)',
 					boxShadow: theme.shadows[2],
 					backgroundImage: 'repeating-linear-gradient(50deg, transparent -500px, #2b374c14 150px)',
 
