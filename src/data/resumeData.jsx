@@ -232,7 +232,7 @@ export default {
 				{ title: "Email", icon: <DraftsRoundedIcon fontSize="small" />, content: "azzolina.alessia@gmail.com" },
 				/* { title: "Phone", icon: <PhoneEnabledIcon fontSize="small" />, content: "(+39) 3281839923" }, */
 				{ title: "Geburtsdatum", icon: <CakeIcon fontSize="small" />, content: "28/11/1992" },
-				{ title: "Nationalität", icon: <PublicIcon fontSize="small" />, content: "Italian" },
+				{ title: "Nationalität", icon: <PublicIcon fontSize="small" />, content: "Italienisch" },
 			],
 			textBtn: "Lebenslauf",
 			iconBtn: <FileDownloadIcon sx={{ marginLeft: "10px" }} fontSize="small" />,

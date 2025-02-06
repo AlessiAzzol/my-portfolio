@@ -4,6 +4,26 @@ import { useLanguage } from "./../../context/LanguageContext.jsx";
 
 function Profile(props) {
 	const { data } = useLanguage();
+	const language = localStorage.getItem("language");
+
+	const onButtonClick = () => {
+		let fileName = "";
+		if (language === "de") {
+			fileName = "CV Azzolina - de.pdf";
+		} else if (language === "it") {
+			fileName = "CV Azzolina - eng.pdf";
+		} else {
+			fileName = "CV Azzolina - eng.pdf";
+		}
+		const pdfUrl = "/my-portfolio/" + fileName;
+		const link = document.createElement("a");
+		link.href = pdfUrl;
+		link.download = fileName;
+
+		document.body.appendChild(link);
+		link.click();
+		document.body.removeChild(link);
+	};
 
 	return (
 		<Card>
@@ -14,7 +34,7 @@ function Profile(props) {
 				<CustomTimeline children={data.profile.menu} />
 			</CardContent>
 			<CardActions>
-				<Button size="small">{data.profile.textBtn} {data.profile.iconBtn}</Button>
+				<Button size="small" onClick={onButtonClick}>{data.profile.textBtn} {data.profile.iconBtn}</Button>
 			</CardActions>
 		</Card>
 	);

@@ -8,9 +8,6 @@ function Header() {
 
 	const { data } = useLanguage();
 	const theme = useTheme();
-	console.log(data);
-
-	if (!data.header) return <p>Loading...</p>;
 
 	return (
 		<Card sx={{ marginBottom: 2, }}>
