@@ -11,7 +11,7 @@ function Resume() {
 	return (
 		<Card sx={{ padding: 3 }}>
 			<Grid container direction="row" sx={{ justifyContent: "space-between", }}>
-				<Grid item="true" size={6}>
+				<Grid item="true" size={{ xs: 12, sm: 12, md: 6 }}>
 					<Grid container alignItems="center" gap={1}>
 						<Avatar><WorkHistoryIcon /></Avatar>
 						<Typography variant="h6">{data.pages.resume.experience.title}</Typography>
@@ -19,7 +19,7 @@ function Resume() {
 
 					<CustomTimeline children={data.pages.resume.experience.section} />
 				</Grid>
-				<Grid item="true" size={6}>
+				<Grid item="true" size={{ xs: 12, sm: 12, md: 6 }}>
 					<Grid container alignItems="center" gap={1}>
 						<Avatar><SchoolIcon /></Avatar>
 						<Typography variant="h6">{data.pages.resume.education.title}</Typography>
@@ -27,7 +27,7 @@ function Resume() {
 					<CustomTimeline children={data.pages.resume.education.section} />
 				</Grid>
 			</Grid>
-		</Card>
+		</Card >
 	);
 }
 

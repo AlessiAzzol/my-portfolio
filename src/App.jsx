@@ -8,8 +8,8 @@ import Footer from './components/Footer/Footer.jsx';
 import Sidenav from './components/Profile/Profile.jsx';
 import Layout from './components/Layout/Layout.jsx';
 import Contact from './pages/Contact.jsx';
-import Portfolio from './pages/Portfolio.jsx';
-import Resume from './pages/Resume.jsx';
+import Portfolio from './pages/Projects.jsx';
+import Resume from './pages/Experience.jsx';
 import Home from './pages/Home.jsx';
 import profile from './assets/img/profile.jpg';
 
@@ -29,10 +29,10 @@ function App() {
 						backgroundSize: 'cover',
 						padding: 3,
 					}}>
-					<Grid item="true" size={3}>
+					<Grid item="true" size={{ xs: 12, sm: 6, md: 3 }}>
 						<Sidenav img={profile} />
 					</Grid>
-					<Grid item="true" size={9}>
+					<Grid item="true" size={{ xs: 12, sm: 6, md: 9 }}>
 
 						<Router>
 							<Routes>
