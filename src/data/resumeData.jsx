@@ -119,8 +119,9 @@ export default {
 			},
 			contact: {
 				title: "Contact",
-				subtitle: "email",
-				description: "TODO",
+				name: "Name and Surname",
+				email: "email",
+				defaultValue: "Send me a message",
 			},
 		},
 	},
@@ -218,8 +219,9 @@ export default {
 			},
 			contact: {
 				title: "Contatti",
-				subtitle: "email",
-				description: "TODO",
+				name: "Nome e cognome",
+				email: "email",
+				defaultValue: "Scrivi un messaggio",
 			},
 		},
 	},
@@ -317,8 +319,9 @@ export default {
 			},
 			contact: {
 				title: "Kontakt",
-				subtitle: "email",
-				description: "TODO",
+				name: "Vorname und Name",
+				email: "email",
+				defaultValue: "Eine Nachricht senden",
 			},
 		},
 	}
