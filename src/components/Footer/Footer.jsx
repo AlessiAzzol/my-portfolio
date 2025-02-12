@@ -1,8 +1,10 @@
+import Box from '@mui/material/Box';
+
 function Footer() {
 	return (
-		<footer style={{ textAlign: 'right' }} >
+		<Box sx={{ textAlign: 'right' }} >
 			<p>&copy; {new Date().getFullYear()} - Alessia Azzolina</p>
-		</ footer>
+		</ Box>
 	);
 }
 

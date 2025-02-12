@@ -49,16 +49,31 @@ export default {
 		},
 		pages: {
 			home: {
-				section: [
-					{
-						title: "About me",
-						description: "I am a creative thinker who enjoys exploring innovative solutions from different perspectives. With a strong background in backend development, I bring strong analytical skills and the ability to approach challenges both independently and collaboratively.",
-					},
-					{
-						title: "Services",
-						description: "TODO",
-					},
-				]
+				section1:
+				{
+					title: "About me",
+					description: "I am a creative thinker who enjoys exploring innovative solutions from different perspectives. With a strong background in backend development, I bring strong analytical skills and the ability to approach challenges both independently and collaboratively.",
+				},
+				section2: {
+					title: "Services",
+					description: "",
+					skills: [
+						{ title: "JAVA", level: 100 },
+						{ title: "Spring Boot", level: 90 },
+						{ title: "Web Services", level: 90 },
+						{ title: "Postman", level: 90 },
+						{ title: "Relational Database", level: 75 },
+						{ title: "HTML, CSS", level: 60 },
+						{ title: "Python, Django", level: 40 },
+						{ title: "Angular JS", level: 30 },
+						{ title: "React", level: 30 },
+					],
+				},
+				section3: {
+					title: "Hobbies",
+					description: "TODO",
+				}
+
 			},
 			resume: {
 				title: "Experience",
@@ -97,20 +112,6 @@ export default {
 						},
 					]
 				},
-				skills: {
-					title: "Skills",
-					section: [
-						{ title: "HTML", level: 90 },
-						{ title: "CSS", level: 80 },
-						{ title: "JavaScript", level: 85 },
-						{ title: "React", level: 90 },
-						{ title: "Angular", level: 80 },
-						{ title: "Vue", level: 75 },
-						{ title: "Java", level: 85 },
-						{ title: "C++", level: 80 },
-						{ title: "Python", level: 75 },
-					]
-				},
 			},
 			portfolio: {
 				title: "Portfolio",
@@ -119,9 +120,13 @@ export default {
 			},
 			contact: {
 				title: "Contact",
-				name: "Name and Surname",
+				name: "Name",
+				surname: "Surname",
 				email: "email",
 				defaultValue: "Send me a message",
+				success: "Message sent successfully.",
+				helperText: "Please enter a valid e-mail address",
+				error: "Error sending message.",
 			},
 		},
 	},
@@ -149,16 +154,30 @@ export default {
 		},
 		pages: {
 			home: {
-				section: [
-					{
-						title: "Su di me",
-						description: "Sono una persona creativa che ama esplorare soluzioni innovative da diverse prospettive. Con un solido background nello sviluppo backend, possiedo forti capacità analitiche e l'abilità di affrontare le sfide sia in modo indipendente che collaborativo.",
-					},
-					{
-						title: "Servizi",
-						description: "TODO",
-					},
-				]
+				section1: {
+					title: "Su di me",
+					description: "Sono una persona creativa che ama esplorare soluzioni innovative da diverse prospettive. Con un solido background nello sviluppo backend, possiedo forti capacità analitiche e l'abilità di affrontare le sfide sia in modo indipendente che collaborativo.",
+				},
+				section2: {
+					title: "Servizi",
+					description: "",
+					skills: [
+						{ title: "JAVA", level: 100 },
+						{ title: "Spring Boot", level: 90 },
+						{ title: "Web Services", level: 90 },
+						{ title: "Postman", level: 90 },
+						{ title: "Relational Database", level: 75 },
+						{ title: "HTML, CSS", level: 60 },
+						{ title: "Python, Django", level: 40 },
+						{ title: "Angular JS", level: 30 },
+						{ title: "React", level: 30 },
+					],
+				},
+				section3: {
+					title: "Tempo libero",
+					description: "TODO",
+				}
+
 			},
 			resume: {
 				title: "Esperienza",
@@ -197,20 +216,7 @@ export default {
 						},
 					]
 				},
-				skills: {
-					title: "Skills",
-					section: [
-						{ title: "HTML", level: 90 },
-						{ title: "CSS", level: 80 },
-						{ title: "JavaScript", level: 85 },
-						{ title: "React", level: 90 },
-						{ title: "Angular", level: 80 },
-						{ title: "Vue", level: 75 },
-						{ title: "Java", level: 85 },
-						{ title: "C++", level: 80 },
-						{ title: "Python", level: 75 },
-					]
-				},
+
 			},
 			portfolio: {
 				title: "Progetti",
@@ -219,9 +225,13 @@ export default {
 			},
 			contact: {
 				title: "Contatti",
-				name: "Nome e cognome",
+				name: "Nome",
+				surname: "Cognome",
 				email: "email",
 				defaultValue: "Scrivi un messaggio",
+				success: "Messaggio inviato correttamente.",
+				helperText: "Inserisci un indirizzo email valido",
+				error: "Si è verificato un errore nell'invio del messaggio.",
 			},
 		},
 	},
@@ -249,16 +259,31 @@ export default {
 		},
 		pages: {
 			home: {
-				section: [
-					{
-						title: "Über mich",
-						description: "Ich bin eine kreative Person, die gerne innovative Lösungen aus verschiedenen Perspektiven erforscht. Mit einem starken Hintergrund in der Backend-Entwicklung, bringe ich ausgeprägte analytische Fähigkeiten sowie die Fähigkeit mit und gehe Herausforderungen sowohl eigenständig als auch im Team an.",
-					},
-					{
-						title: "Leistungen",
-						description: "TODO",
-					},
-				]
+				section1:
+				{
+					title: "Über mich",
+					description: "Ich bin eine kreative Person, die gerne innovative Lösungen aus verschiedenen Perspektiven erforscht. Mit einem starken Hintergrund in der Backend-Entwicklung, bringe ich ausgeprägte analytische Fähigkeiten sowie die Fähigkeit mit und gehe Herausforderungen sowohl eigenständig als auch im Team an.",
+				},
+				section2: {
+					title: "Leistungen",
+					description: "",
+					skills: [
+						{ title: "JAVA", level: 100 },
+						{ title: "Spring Boot", level: 90 },
+						{ title: "Web Services", level: 90 },
+						{ title: "Postman", level: 90 },
+						{ title: "Relational Database", level: 75 },
+						{ title: "HTML, CSS", level: 60 },
+						{ title: "Python, Django", level: 40 },
+						{ title: "Angular JS", level: 30 },
+						{ title: "React", level: 30 },
+					],
+				},
+				section3: {
+					title: "Hobbys",
+					description: "TODO",
+				}
+
 			},
 			resume: {
 				title: "Erfahrung",
@@ -297,20 +322,6 @@ export default {
 						},
 					]
 				},
-				skills: {
-					title: "Skills",
-					section: [
-						{ title: "HTML", level: 90 },
-						{ title: "CSS", level: 80 },
-						{ title: "JavaScript", level: 85 },
-						{ title: "React", level: 90 },
-						{ title: "Angular", level: 80 },
-						{ title: "Vue", level: 75 },
-						{ title: "Java", level: 85 },
-						{ title: "C++", level: 80 },
-						{ title: "Python", level: 75 },
-					]
-				},
 			},
 			portfolio: {
 				title: "Projekte",
@@ -319,9 +330,13 @@ export default {
 			},
 			contact: {
 				title: "Kontakt",
-				name: "Vorname und Name",
+				name: "Vorname",
+				surname: "Nachname",
 				email: "email",
 				defaultValue: "Eine Nachricht senden",
+				success: "Nachricht korrekt gesendet.",
+				helperText: "Bitte geben Sie eine gültige E-Mail ein",
+				error: "Ein Fehler ist aufgetreten, die Nachricht wurde nicht gesendet.",
 			},
 		},
 	}

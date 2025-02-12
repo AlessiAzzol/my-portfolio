@@ -11,7 +11,7 @@ function Header() {
 	const location = useLocation();
 
 	return (
-		<Card sx={{ marginBottom: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center', }}>
+		<Card sx={{ marginBottom: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: 60 }}>
 			<Box sx={{ display: 'flex', flexGrow: 1, alignItems: 'center', padding: 0 }}>
 				<Button
 					key='home'

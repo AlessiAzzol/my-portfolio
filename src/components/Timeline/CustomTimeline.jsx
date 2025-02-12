@@ -17,12 +17,12 @@ function CustomTimeline({ children }) {
 			{children.map((child, index) => (
 				<TimelineItem key={index} >
 					<TimelineSeparator>
-						<TimelineDot sx={{ margin: "0", }}>{child.icon}</TimelineDot>
+						<TimelineDot sx={{ margin: 0, }}>{child.icon}</TimelineDot>
 						{index !== children.length - 1 && (
 							<TimelineConnector />
 						)}
 					</TimelineSeparator>
-					<TimelineContent sx={{ paddingTop: "0", }} color="textSecondary">
+					<TimelineContent sx={{ paddingTop: 0, }} color="textSecondary">
 						<Typography><strong>{child.title}</strong></Typography>
 						<Typography variant="caption"><em>{child.date}</em></Typography>
 						<Typography>{child.content}</Typography>

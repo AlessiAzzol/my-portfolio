@@ -9,7 +9,12 @@ import { useLanguage } from '../context/LanguageContext.jsx';
 function Resume() {
 	const { data } = useLanguage();
 	return (
-		<Card sx={{ padding: 3 }}>
+		<Card sx={{
+			padding: 3,
+			flexGrow: 1,
+			overflow: "auto",
+			maxHeight: "82vh",
+		}}>
 			<Grid container direction="row" sx={{ justifyContent: "space-between", }}>
 				<Grid item="true" size={{ xs: 12, sm: 12, md: 6 }}>
 					<Grid container alignItems="center" gap={1}>

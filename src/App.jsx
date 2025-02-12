@@ -20,20 +20,23 @@ function App() {
 			<ThemeProviderWrapper>
 
 				<CssBaseline />
-				<Grid container rowSpacing={1} columnSpacing={2}
+				<Grid container rowSpacing={1} columnSpacing={2} size={12}
 					sx={{
 						height: "100vh",
+						display: "flex",
+						justifyContent: "center",
 						backgroundImage: (theme) => theme.custom.background,
 						backgroundPosition: 'center',
 						backgroundRepeat: 'no-repeat',
 						backgroundSize: 'cover',
 						padding: 3,
+						overflow: "auto",
 					}}>
-					<Grid item="true" size={{ xs: 12, sm: 6, md: 3, lg: 2 }}>
+					<Grid item="true" size={{ xs: 12, sm: 6, md: 3, lg: 3, xl: 3, }} sx={{ height: "100%" }}>
 						<Sidenav img={profile} />
 					</Grid>
-					<Grid item="true" size={{ xs: 12, sm: 6, md: 9, lg: 10 }}>
 
+					<Grid item="true" size={{ xs: 12, sm: 6, md: 9, lg: 9, xl: 8, }}>
 						<Router>
 							<Routes>
 								<Route path="/" element={<Layout />}>

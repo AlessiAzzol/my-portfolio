@@ -15,22 +15,6 @@
 	--var-color: 110, 38, 38;
 }
 
-.left {
-	width: 15%;
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-}
-
-.right {
-	width: 85%;
-}
-
-.glass {
-	backdrop-filter: saturate(200%) blur(1px);
-	box-shadow: var(--box-shadow-3d);
-	background-image: repeating-linear-gradient(45deg, transparent, #05101000 100px, #2b374c14 200px)
-}
 
 
 @font-face {

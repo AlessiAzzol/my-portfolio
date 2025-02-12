@@ -26,11 +26,15 @@ function Profile(props) {
 	};
 
 	return (
-		<Card>
+		<Card sx={{
+			padding: 0,
+			flexGrow: 1,
+			height: "93vh",
+		}}>
 			<CardHeader title={data.profile.title} subheader={data.profile.subheader} />
 			<CardMedia image={props.img} sx={{ clipPath: "polygon(0 20%, 100% 0, 100% 80%, 0% 100%)", height: "200px", marginTop: "-25px" }} />
 			<Avatar sx={{ marginTop: "-25px", marginLeft: "10px", fontFamily: 'Bonbon', fontWeight: 'bold', fontSize: 'xx-large', }}>A</Avatar>
-			<CardContent sx={{ padding: "0" }}>
+			<CardContent sx={{ padding: 0, }}>
 				<CustomTimeline children={data.profile.menu} />
 			</CardContent>
 			<CardActions>
