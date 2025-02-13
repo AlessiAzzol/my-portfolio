@@ -5,7 +5,7 @@ import { LanguageProvider } from './context/LanguageContext.jsx';
 import Grid from '@mui/material/Grid2';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Footer from './components/Footer/Footer.jsx';
-import Sidenav from './components/Profile/Profile.jsx';
+import Profile from './components/Profile/Profile.jsx';
 import Layout from './components/Layout/Layout.jsx';
 import Contact from './pages/Contact.jsx';
 import Portfolio from './pages/Projects.jsx';
@@ -32,8 +32,8 @@ function App() {
 						padding: 0,
 						overflow: "auto",
 					}}>
-					<Grid item="true" size={{ xs: 12, sm: 6, md: 3, lg: 3, xl: 3, }} >
-						<Sidenav img={profile} />
+					<Grid item="true" size={{ xs: 12, sm: 6, md: 3, lg: 3, xl: 3, }} sx={{ display: { xs: 'none', sm: 'block' } }} >
+						<Profile img={profile} />
 					</Grid>
 
 					<Grid item="true" size={{ xs: 12, sm: 6, md: 9, lg: 9, xl: 7, }}>

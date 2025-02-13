@@ -29,11 +29,11 @@ export default {
 			title: "ALESSIA AZZOLINA",
 			subheader: "Software Developer",
 			menu: [
-				{ title: "Address", icon: <CottageRoundedIcon fontSize="small" />, content: "Filderbahnstr. 57B, 70567, Stuttgart, Germany" },
-				{ title: "Email", icon: <DraftsRoundedIcon fontSize="small" />, content: "azzolina.alessia@gmail.com" },
+				{ title: "Address", icon: <CottageRoundedIcon fontSize="small" />, content: "Filderbahnstr. 57B, 70567, Stuttgart, Germany", fontSize: "0.9em" },
+				{ title: "Email", icon: <DraftsRoundedIcon fontSize="small" />, content: "azzolina.alessia@gmail.com", fontSize: "0.9em" },
 				/* { title: "Phone", icon: <PhoneEnabledIcon fontSize="small" />, content: "(+39) 3281839923" }, */
-				{ title: "Date of birth", icon: <CakeIcon fontSize="small" />, content: "28/11/1992" },
-				{ title: "Nationality", icon: <PublicIcon fontSize="small" />, content: "Italian" },
+				{ title: "Date of birth", icon: <CakeIcon fontSize="small" />, content: "28/11/1992", fontSize: "0.9em" },
+				{ title: "Nationality", icon: <PublicIcon fontSize="small" />, content: "Italian", fontSize: "0.9em" },
 			],
 			textBtn: "download CV ",
 			iconBtn: <FileDownloadIcon sx={{ marginLeft: "10px" }} fontSize="small" />,

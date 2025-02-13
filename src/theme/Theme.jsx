@@ -1,7 +1,7 @@
 import { createTheme, responsiveFontSizes } from '@mui/material';
-import lightImg from '../assets/img/L02.jpg';
+import lightImg from '../assets/img/L08.jpg';
 import darkImg from '../assets/img/D03.jpg';
-import colorfulImg from '../assets/img/C05.jpg';
+import colorfulImg from '../assets/img/C01.jpg';
 
 
 const baseTheme = createTheme({
@@ -120,11 +120,11 @@ const darkTheme = createTheme({
 	],
 	custom: {
 		iconColor: {
-			primary: 'rgb(26, 90, 84)',
+			primary: 'rgb(163, 192, 189)',
 			secondary: '#F9F9F9',
 		},
 		btnColor: {
-			primary: 'rgb( 26, 90, 84, 0.6)',
+			primary: 'rgb( 163, 192, 189, 0.6)',
 			secondary: '#F9F9F9',
 		},
 		background: `url(${darkImg})`,

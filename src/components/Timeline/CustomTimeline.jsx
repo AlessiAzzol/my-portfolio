@@ -9,9 +9,12 @@ import Typography from '@mui/material/Typography';
 function CustomTimeline({ children }) {
 	return (
 		<Timeline sx={{
+			marginBottom: 0,
+			paddingBottom: 0,
 			[`& .${timelineItemClasses.root}:before`]: {
 				flex: 0,
 				padding: 0,
+
 			},
 		}}>
 			{children.map((child, index) => (
@@ -23,9 +26,9 @@ function CustomTimeline({ children }) {
 						)}
 					</TimelineSeparator>
 					<TimelineContent sx={{ paddingTop: 0, }} color="textSecondary">
-						<Typography><strong>{child.title}</strong></Typography>
+						<Typography sx={{ fontSize: child.fontSize }}><strong>{child.title}</strong></Typography>
 						<Typography variant="caption"><em>{child.date}</em></Typography>
-						<Typography >{child.content}</Typography>
+						<Typography sx={{ fontSize: child.fontSize }}>{child.content}</Typography>
 					</TimelineContent>
 				</TimelineItem>
 			))
