@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Header from "./../Header/Header.jsx";
 import { useLanguage } from "./../../context/LanguageContext.jsx";
+import Grid from "@mui/material/Grid2";
 
 function Layout() {
 	const { data } = useLanguage();
@@ -8,12 +9,12 @@ function Layout() {
 	if (!data) return <p>Loading...</p>;
 
 	return (
-		<div>
+		<Grid item="true">
 			<Header />
 			<main>
 				<Outlet />
 			</main>
-		</div>
+		</Grid>
 	);
 }
 

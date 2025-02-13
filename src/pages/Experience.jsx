@@ -10,10 +10,10 @@ function Resume() {
 	const { data } = useLanguage();
 	return (
 		<Card sx={{
+			margin: 2,
 			padding: 3,
-			flexGrow: 1,
 			overflow: "auto",
-			maxHeight: "82vh",
+			maxHeight: "75vh",
 		}}>
 			<Grid container direction="row" sx={{ justifyContent: "space-between", }}>
 				<Grid item="true" size={{ xs: 12, sm: 12, md: 6 }}>
@@ -33,6 +33,7 @@ function Resume() {
 				</Grid>
 			</Grid>
 		</Card >
+
 	);
 }
 

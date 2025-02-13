@@ -10,10 +10,9 @@ export default {
 		themes: {
 			label: "Theme",
 			options: [
-				{ name: "cloud", value: "cloud" },
-				{ name: "color", value: "color" },
-				{ name: "leaf", value: "leaf" },
-				{ name: "flowers", value: "flowers" },
+				{ name: "light", value: "light" },
+				{ name: "dark", value: "dark" },
+				{ name: "colorful", value: "colorful" },
 			],
 		},
 		languages: {

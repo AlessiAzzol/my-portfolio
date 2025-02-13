@@ -6,14 +6,13 @@ import { useLanguage } from '../context/LanguageContext.jsx';
 function Home() {
 	const { data } = useLanguage();
 
-	if (!data.pages) return <p>Loading...</p>;
-
 	return (
+
 		<Card sx={{
+			margin: 2,
 			padding: 3,
-			flexGrow: 1,
 			overflow: "auto",
-			maxHeight: "82vh",
+			maxHeight: "75vh",
 		}}>
 			<Grid container direction="column" spacing={4}>
 				<Grid item="true" id="title1">
@@ -29,10 +28,10 @@ function Home() {
 					{data.pages.home.section2.skills?.map((skill, index) => (
 						<>
 							<Grid item="true" size={{ xs: 12, sm: 12, md: 2 }} id={`title` + index}>
-								<Typography >{skill.title}</Typography>
+								<Typography id={index}>{skill.title}</Typography>
 							</Grid>
 							<Grid item="true" size={{ xs: 12, sm: 12, md: 4 }} id={`level` + index} >
-								<LinearProgress variant="determinate" value={skill.level} color="secondary" />
+								<LinearProgress variant="determinate" value={skill.level} id={index} color="secondary" />
 							</Grid>
 
 						</>
@@ -48,6 +47,7 @@ function Home() {
 
 			</Grid>
 		</Card >
+
 
 	);
 }

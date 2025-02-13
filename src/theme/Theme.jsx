@@ -1,8 +1,7 @@
 import { createTheme, responsiveFontSizes } from '@mui/material';
-import cloudImg from '../assets/img/cloud08.jpg';
-import fantasyImg from '../assets/img/fantasy10.jpg';
-import flowerImg from '../assets/img/flower01.jpg';
-import leafImg from '../assets/img/leaf06.jpg';
+import lightImg from '../assets/img/L02.jpg';
+import darkImg from '../assets/img/D03.jpg';
+import colorfulImg from '../assets/img/C05.jpg';
 
 
 const baseTheme = createTheme({
@@ -21,6 +20,7 @@ const baseTheme = createTheme({
 		h6: {
 			fontWeight: "bold",
 		},
+
 	},
 	components: {
 		MuiButton: {
@@ -71,38 +71,7 @@ const baseTheme = createTheme({
 });
 
 
-const cloudTheme = createTheme({
-	...baseTheme,
-	shadows: [
-		...createTheme().shadows.slice(0, 1),
-		"2px 0px 5px rgba(0, 0, 0, 0.3)",
-		`rgba(255, 255, 255, 0.17) 0px -23px 25px 0px inset, 
-			 rgba(255, 255, 255, 0.15) 0px -36px 30px 0px inset,
-			 rgba(255, 255, 255, 0.1) 0px -79px 40px 0px inset,
-			 rgba(255, 255, 255, 0.06) 0px 2px 1px,
-			 rgba(255, 255, 255, 0.09) 0px 4px 2px, 
-			 rgba(255, 255, 255, 0.09) 0px 8px 4px,
-			 rgba(255, 255, 255, 0.09) 0px 16px 8px,
-			 rgba(255, 255, 255, 0.09) 0px 32px 16px`,
-		...createTheme().shadows.slice(3),
-	],
-	custom: {
-		iconColor: {
-			primary: '#394149;',
-			secondary: '#F9F9F9',
-		},
-		btnColor: {
-			primary: '#54708f73;',
-			secondary: '#394149;',
-
-		},
-
-		background: `url(${cloudImg})`,
-	},
-
-});
-
-const fantasyTheme = createTheme({
+const lightTheme = createTheme({
 	...baseTheme,
 	shadows: [
 		...createTheme().shadows.slice(0, 1),
@@ -126,13 +95,16 @@ const fantasyTheme = createTheme({
 			primary: 'rgb( 6, 16, 88, 0.6)',
 			secondary: '#F9F9F9',
 		},
-		background: `url(${fantasyImg})`,
+		background: `url(${lightImg})`,
 	},
 
 });
 
-const leafTheme = createTheme({
+const darkTheme = createTheme({
 	...baseTheme,
+	palette: {
+		mode: 'dark',
+	},
 	shadows: [
 		...createTheme().shadows.slice(0, 1),
 		"2px 0px 5px rgba(0, 0, 0, 0.3)",
@@ -155,13 +127,13 @@ const leafTheme = createTheme({
 			primary: 'rgb( 26, 90, 84, 0.6)',
 			secondary: '#F9F9F9',
 		},
-		background: `url(${leafImg})`,
+		background: `url(${darkImg})`,
 
 	},
 
 });
 
-const flowerTheme = createTheme({
+const colorfulTheme = createTheme({
 	...baseTheme,
 	shadows: [
 		...createTheme().shadows.slice(0, 1),
@@ -185,15 +157,14 @@ const flowerTheme = createTheme({
 			primary: 'rgb( 110, 38, 38, 0.6)',
 			secondary: '#F9F9F9',
 		},
-		background: `url(${flowerImg})`,
+		background: `url(${colorfulImg})`,
 
 	},
 
 });
 
 export const themes = {
-	cloud: responsiveFontSizes(cloudTheme),
-	color: responsiveFontSizes(fantasyTheme),
-	leaf: responsiveFontSizes(leafTheme),
-	flowers: responsiveFontSizes(flowerTheme),
+	light: responsiveFontSizes(lightTheme),
+	dark: responsiveFontSizes(darkTheme),
+	colorful: responsiveFontSizes(colorfulTheme),
 };

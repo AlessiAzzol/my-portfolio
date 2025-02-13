@@ -20,7 +20,7 @@ function App() {
 			<ThemeProviderWrapper>
 
 				<CssBaseline />
-				<Grid container rowSpacing={1} columnSpacing={2} size={12}
+				<Grid container size={12}
 					sx={{
 						height: "100vh",
 						display: "flex",
@@ -29,14 +29,14 @@ function App() {
 						backgroundPosition: 'center',
 						backgroundRepeat: 'no-repeat',
 						backgroundSize: 'cover',
-						padding: 3,
+						padding: 0,
 						overflow: "auto",
 					}}>
-					<Grid item="true" size={{ xs: 12, sm: 6, md: 3, lg: 3, xl: 3, }} sx={{ height: "100%" }}>
+					<Grid item="true" size={{ xs: 12, sm: 6, md: 3, lg: 3, xl: 3, }} >
 						<Sidenav img={profile} />
 					</Grid>
 
-					<Grid item="true" size={{ xs: 12, sm: 6, md: 9, lg: 9, xl: 8, }}>
+					<Grid item="true" size={{ xs: 12, sm: 6, md: 9, lg: 9, xl: 7, }}>
 						<Router>
 							<Routes>
 								<Route path="/" element={<Layout />}>
@@ -48,14 +48,14 @@ function App() {
 							</Routes>
 						</Router>
 					</Grid>
-					<Grid item="true" size={12}>
+					<Grid item="true" size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12, }}>
 						<Footer />
 					</Grid>
 
 				</Grid>
 
 			</ThemeProviderWrapper >
-		</LanguageProvider>
+		</LanguageProvider >
 	);
 }
 

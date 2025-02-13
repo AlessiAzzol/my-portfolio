@@ -25,7 +25,7 @@ function CustomTimeline({ children }) {
 					<TimelineContent sx={{ paddingTop: 0, }} color="textSecondary">
 						<Typography><strong>{child.title}</strong></Typography>
 						<Typography variant="caption"><em>{child.date}</em></Typography>
-						<Typography>{child.content}</Typography>
+						<Typography >{child.content}</Typography>
 					</TimelineContent>
 				</TimelineItem>
 			))

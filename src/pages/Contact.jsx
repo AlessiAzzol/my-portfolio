@@ -57,11 +57,12 @@ function Contact() {
 	};
 
 	return (
-		<Card sx={{
+
+		<Card container sx={{
+			margin: 2,
 			padding: 3,
-			flexGrow: 1,
 			overflow: "auto",
-			maxHeight: "82vh",
+			maxHeight: "75vh",
 		}}>
 			<Typography variant="h6">{data.pages.contact.title}</Typography>
 			<Box component="form" autoComplete="off" noValidate onSubmit={handleSubmit}>

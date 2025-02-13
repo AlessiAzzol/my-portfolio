@@ -7,7 +7,7 @@ const ThemeContext = createContext();
 export const useTheme = () => useContext(ThemeContext);
 
 export const ThemeProviderWrapper = ({ children }) => {
-	const [themeName, setThemeName] = useState("flowers");
+	const [themeName, setThemeName] = useState("light");
 
 	const switchTheme = (newTheme) => setThemeName(newTheme);
 

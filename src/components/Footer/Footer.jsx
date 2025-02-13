@@ -1,9 +1,10 @@
 import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 
 function Footer() {
 	return (
-		<Box sx={{ textAlign: 'right' }} >
-			<p>&copy; {new Date().getFullYear()} - Alessia Azzolina</p>
+		<Box sx={{ textAlign: 'right', marginRight: 2, padding: 0 }} >
+			<Typography>&copy; {new Date().getFullYear()} - Alessia Azzolina</Typography>
 		</ Box>
 	);
 }

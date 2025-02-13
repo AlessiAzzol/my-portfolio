@@ -7,10 +7,10 @@ function Portfolio() {
 	return (
 
 		<Card sx={{
+			margin: 2,
 			padding: 3,
-			flexGrow: 1,
 			overflow: "auto",
-			maxHeight: "82vh",
+			maxHeight: "75vh",
 		}}>
 			<Typography variant="h3">{data.pages.portfolio.title}</Typography>
 			<Typography variant="h5">{data.pages.portfolio.subtitle}</Typography>
