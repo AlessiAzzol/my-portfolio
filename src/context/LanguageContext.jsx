@@ -18,7 +18,7 @@ export const LanguageProvider = ({ children }) => {
 	const settings = resumeData.settings;
 
 	return (
-		<LanguageContext.Provider value={{ language, switchLanguage, data, settings }}>
+		<LanguageContext.Provider value={{ language, switchLanguage, data, settings }} key={language}>
 			{children}
 		</LanguageContext.Provider>
 	);

@@ -12,7 +12,6 @@ export default {
 			options: [
 				{ name: "light", value: "light" },
 				{ name: "dark", value: "dark" },
-				{ name: "colorful", value: "colorful" },
 			],
 		},
 		languages: {
