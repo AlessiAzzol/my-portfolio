@@ -115,6 +115,32 @@ export default {
 				title: "Portfolio",
 				subtitle: "Projects",
 				description: "TODO",
+				projects: [
+					{
+						title: "Projekt 1",
+						subheader: "JAVA",
+						shortDescription: "TODO",
+						longDescription: "LONG DESCRIPTION",
+						img: "img/obiettivo.png",
+						reference: "https://www.google.com"
+					},
+					{
+						title: "Projekt 2",
+						subheader: "JAVA",
+						shortDescription: "TODO",
+						longDescription: "LONG DESCRIPTION",
+						img: "img/obiettivo.png",
+						reference: "https://www.google.com"
+					},
+					{
+						title: "Projekt 3",
+						subheader: "JAVA",
+						shortDescription: "TODO",
+						longDescription: "LONG DESCRIPTION",
+						img: "img/obiettivo.png",
+						reference: "https://www.google.com"
+					},
+				],
 			},
 			contact: {
 				title: "Contact",
@@ -220,6 +246,32 @@ export default {
 				title: "Progetti",
 				subtitle: "Progetti",
 				description: "TODO",
+				projects: [
+					{
+						title: "Projekt 1",
+						subheader: "JAVA",
+						shortDescription: "TODO",
+						longDescription: "LONG DESCRIPTION",
+						img: "img/obiettivo.png",
+						reference: "https://www.google.com"
+					},
+					{
+						title: "Projekt 2",
+						subheader: "JAVA",
+						shortDescription: "TODO",
+						longDescription: "LONG DESCRIPTION",
+						img: "img/obiettivo.png",
+						reference: "https://www.google.com"
+					},
+					{
+						title: "Projekt 3",
+						subheader: "JAVA",
+						shortDescription: "TODO",
+						longDescription: "LONG DESCRIPTION",
+						img: "img/obiettivo.png",
+						reference: "https://www.google.com"
+					},
+				],
 			},
 			contact: {
 				title: "Contatti",
@@ -311,12 +363,12 @@ export default {
 						{
 							title: "Java Softwareentwicklerin",
 							date: "01/02/2021 - present - Gamma Innovation",
-							content: "Ich arbeite an einer Anwendung, die den Immobilienbewertungsprozess für Geschäftskunden automatisiert. Ich habe verschiedene Funktionen entwickelt, darunter angepassten Zugriff je nach Benutzerprofil, automatisierte Kommunikation mit Anbietern auf dem Markt sowie die Überwachung des Abrechnungsprozesses. Mein Schwerpunkt liegt hauptsächlich auf der Umsetzung von SOAP und RESTful-Webservices in Java unter Verwendung des Spring Frameworks."
+							content: "Ich arbeite an einer Anwendung, die den Immobilienbewertungsprozess für Geschäftskunden automatisiert. Ich habe verschiedene Funktionen entwickelt, darunter angepassten Zugriff für unterschiedliche Benutzerprofile, automatisierte Kommunikation mit Anbietern auf dem Markt und Überwachung des Abrechnungsprozesses. Ich konzentriere mich hauptsächlich auf die Umsetzung von SOAP- und RESTful-Webservices in Java mit dem Spring-Framework."
 						},
 						{
 							title: "Systems analyst",
 							date: "01/10/2018 – 25/03/2020 Minsait, an Indra company",
-							content: "Ich arbeitete an der Implementierung von Integrationssystemen mit der TIBCO BusinessWorks 6- Plattform. Ich entwickelte Webservices zur Integration von Kundensystemen, einschließlich Datenbanken, SAP und TIBCO selbst. Darüber hinaus war ich für die Migration bestehender Anwendungen auf die neuesten Versionen von TIBCO verantwortlich. Jede Entwicklungsphase wurde durch die Erstellung technischer Dokumentation detailliert beschrieben."
+							content: "Ich habe an der Implementierung von Integrationssystemen mit der TIBCO BusinessWorks 6-Plattform gearbeitet. Ich habe Webservices entwickelt und verwaltet, um Kundensysteme zu integrieren, darunter Datenbanken, SAP und TIBCO selbst. Außerdem war ich für die Migration bestehender Anwendungen auf die neuesten Versionen von TIBCO verantwortlich. Jede Entwicklungsphase wurde durch die Erstellung technischer Dokumentationen genau dokumentiert."
 						},
 					]
 				},
@@ -325,6 +377,32 @@ export default {
 				title: "Projekte",
 				subtitle: "Projekte",
 				description: "TODO",
+				projects: [
+					{
+						title: "Projekt 1",
+						subheader: "JAVA",
+						shortDescription: "TODO",
+						longDescription: "LONG DESCRIPTION",
+						img: "img/obiettivo.png",
+						reference: "https://www.google.com"
+					},
+					{
+						title: "Projekt 2",
+						subheader: "JAVA",
+						shortDescription: "TODO",
+						longDescription: "LONG DESCRIPTION",
+						img: "img/obiettivo.png",
+						reference: "https://www.google.com"
+					},
+					{
+						title: "Projekt 3",
+						subheader: "JAVA",
+						shortDescription: "TODO",
+						longDescription: "LONG DESCRIPTION",
+						img: "img/obiettivo.png",
+						reference: "https://www.google.com"
+					},
+				],
 			},
 			contact: {
 				title: "Kontakt",

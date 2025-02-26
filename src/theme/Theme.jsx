@@ -1,5 +1,5 @@
 import { createTheme, responsiveFontSizes } from '@mui/material';
-import lightImg from '../assets/img/L01.jpg';
+import lightImg from '../assets/img/L17.jpg';
 import darkImg from '../assets/img/D01.jpg';
 
 
