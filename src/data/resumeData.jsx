@@ -117,19 +117,27 @@ export default {
 				description: "TODO",
 				projects: [
 					{
-						title: "Projekt 1",
+						title: "Perizie Web",
 						subheader: "JAVA",
-						shortDescription: "TODO",
-						longDescription: "LONG DESCRIPTION",
-						img: "img/obiettivo.png",
-						reference: "https://www.google.com"
+						shortDescription: "Software che consente la gestione e l'Automatizzazione completa del processo periziale per garantire conformità rispetto alle Polices aziendali.",
+						longDescription: "L'applicazione comprende:<br />" +
+							"<ul><li>Accessi differenziati per profili/unità organizzative</li>" +
+							"<li>Gestione di perizie Retail e Business Corporate</li>" +
+							"<li>Colloquio automatizzato e immediato con tutti i principali Provider presenti sul mercato</li>" +
+							"<li>Gestione documentale con Versioning dei documenti presenti sul sistema</li>" +
+							"<li>Invio tramite MTOM dei documenti di richiesta e perizia</li>" +
+							"<li>Gestione anagrafica dei periti interni della Banca, con eventuale processo ad hoc</li>" +
+							"<li>Monitoraggio del processo di fatturazione</li>" +
+							"<li>Nativamente integrata con gli altri sistemi banca che si interfacciano con il mondo perizie</li></ul>",
+						img: "img/perizieWeb.png",
+						reference: "https://www.gammainnovation.it/prodotti/perizie-web/"
 					},
 					{
 						title: "Projekt 2",
 						subheader: "JAVA",
 						shortDescription: "TODO",
-						longDescription: "LONG DESCRIPTION",
-						img: "img/obiettivo.png",
+						longDescription: "",
+						img: "img/todo.jpg",
 						reference: "https://www.google.com"
 					},
 					{
@@ -137,7 +145,7 @@ export default {
 						subheader: "JAVA",
 						shortDescription: "TODO",
 						longDescription: "LONG DESCRIPTION",
-						img: "img/obiettivo.png",
+						img: "img/todo.jpg",
 						reference: "https://www.google.com"
 					},
 				],
@@ -248,19 +256,27 @@ export default {
 				description: "TODO",
 				projects: [
 					{
-						title: "Projekt 1",
+						title: "Perizie Web",
 						subheader: "JAVA",
-						shortDescription: "TODO",
-						longDescription: "LONG DESCRIPTION",
-						img: "img/obiettivo.png",
-						reference: "https://www.google.com"
+						shortDescription: "Software che consente la gestione e l'Automatizzazione completa del processo periziale per garantire conformità rispetto alle Polices aziendali.",
+						longDescription: "L'applicazione comprende:<br />" +
+							"<ul><li>Accessi differenziati per profili/unità organizzative</li>" +
+							"<li>Gestione di perizie Retail e Business Corporate</li>" +
+							"<li>Colloquio automatizzato e immediato con tutti i principali Provider presenti sul mercato</li>" +
+							"<li>Gestione documentale con Versioning dei documenti presenti sul sistema</li>" +
+							"<li>Invio tramite MTOM dei documenti di richiesta e perizia</li>" +
+							"<li>Gestione anagrafica dei periti interni della Banca, con eventuale processo ad hoc</li>" +
+							"<li>Monitoraggio del processo di fatturazione</li>" +
+							"<li>Nativamente integrata con gli altri sistemi banca che si interfacciano con il mondo perizie</li></ul>",
+						img: "img/perizieWeb.png",
+						reference: "https://www.gammainnovation.it/prodotti/perizie-web/"
 					},
 					{
 						title: "Projekt 2",
 						subheader: "JAVA",
 						shortDescription: "TODO",
 						longDescription: "LONG DESCRIPTION",
-						img: "img/obiettivo.png",
+						img: "img/todo.jpg",
 						reference: "https://www.google.com"
 					},
 					{
@@ -268,7 +284,7 @@ export default {
 						subheader: "JAVA",
 						shortDescription: "TODO",
 						longDescription: "LONG DESCRIPTION",
-						img: "img/obiettivo.png",
+						img: "img/todo.jpg",
 						reference: "https://www.google.com"
 					},
 				],
@@ -379,19 +395,27 @@ export default {
 				description: "TODO",
 				projects: [
 					{
-						title: "Projekt 1",
+						title: "Perizie Web",
 						subheader: "JAVA",
-						shortDescription: "TODO",
-						longDescription: "LONG DESCRIPTION",
-						img: "img/obiettivo.png",
-						reference: "https://www.google.com"
+						shortDescription: "Software che consente la gestione e l'Automatizzazione completa del processo periziale per garantire conformità rispetto alle Polices aziendali.",
+						longDescription: "L'applicazione comprende:<br />" +
+							"<ul><li>Accessi differenziati per profili/unità organizzative</li>" +
+							"<li>Gestione di perizie Retail e Business Corporate</li>" +
+							"<li>Colloquio automatizzato e immediato con tutti i principali Provider presenti sul mercato</li>" +
+							"<li>Gestione documentale con Versioning dei documenti presenti sul sistema</li>" +
+							"<li>Invio tramite MTOM dei documenti di richiesta e perizia</li>" +
+							"<li>Gestione anagrafica dei periti interni della Banca, con eventuale processo ad hoc</li>" +
+							"<li>Monitoraggio del processo di fatturazione</li>" +
+							"<li>Nativamente integrata con gli altri sistemi banca che si interfacciano con il mondo perizie</li></ul>",
+						img: "img/perizieWeb.png",
+						reference: "https://www.gammainnovation.it/prodotti/perizie-web/"
 					},
 					{
 						title: "Projekt 2",
 						subheader: "JAVA",
 						shortDescription: "TODO",
 						longDescription: "LONG DESCRIPTION",
-						img: "img/obiettivo.png",
+						img: "img/todo.jpg",
 						reference: "https://www.google.com"
 					},
 					{
@@ -399,7 +423,7 @@ export default {
 						subheader: "JAVA",
 						shortDescription: "TODO",
 						longDescription: "LONG DESCRIPTION",
-						img: "img/obiettivo.png",
+						img: "img/todo.jpg",
 						reference: "https://www.google.com"
 					},
 				],

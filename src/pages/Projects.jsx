@@ -90,7 +90,7 @@ function Portfolio() {
 							/>
 							<CardMedia key={`media` + index}
 								component="img"
-								height="194"
+
 								image={project.img}
 							/>
 							<CardContent key={`shortBody` + index}>
@@ -103,19 +103,21 @@ function Portfolio() {
 									target="_blank">
 									<GitHubIcon />
 								</IconButton>
-								<ExpandMore
-									expand={expanded}
-									onClick={() => handleExpandClick(index)}
-									aria-expanded={expanded[index] || false}
-									aria-label="show more"
-								>
-									<ExpandMoreIcon />
-								</ExpandMore>
+								{project.longDescription && (
+									<ExpandMore
+										expand={expanded[index]}
+										onClick={() => handleExpandClick(index)}
+										aria-expanded={expanded[index] || false}
+										aria-label="show more"
+									>
+										<ExpandMoreIcon />
+									</ExpandMore>
+								)}
 							</CardActions>
 							<Collapse in={expanded[index] || false} timeout="auto" unmountOnExit>
 								<CardContent key={`longBody` + index}>
 									<Typography variant="body2" sx={{ color: 'text.secondary' }}>
-										{project.longDescription}
+										<p dangerouslySetInnerHTML={{ __html: project.longDescription }} />
 									</Typography>
 								</CardContent>
 							</Collapse>
