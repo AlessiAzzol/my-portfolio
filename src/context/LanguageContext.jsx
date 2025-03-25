@@ -6,7 +6,7 @@ const LanguageContext = createContext();
 export const useLanguage = () => useContext(LanguageContext);
 
 export const LanguageProvider = ({ children }) => {
-	const getInitialLanguage = () => localStorage.getItem("language") || "en";
+	const getInitialLanguage = () => localStorage.getItem("language") || "gb";
 	const [language, setLanguage] = useState(getInitialLanguage);
 
 	const switchLanguage = (lang) => {
@@ -14,7 +14,7 @@ export const LanguageProvider = ({ children }) => {
 		localStorage.setItem("language", lang);
 	};
 
-	const data = resumeData[language] || resumeData["en"];
+	const data = resumeData[language] || resumeData["gb"];
 	const settings = resumeData.settings;
 
 	return (

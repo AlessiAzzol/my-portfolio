@@ -1,12 +1,10 @@
 import { createTheme, responsiveFontSizes } from '@mui/material';
-import lightImg from '../assets/img/L17.jpg';
-import darkImg from '../assets/img/D01.jpg';
 
 
 const baseTheme = createTheme({
 	palette: {
 		primary: {
-			main: 'rgba(110, 38, 38, 0.17)',
+			main: 'rgba(26, 15, 78, 0.17)',
 		},
 		secondary: {
 			main: '#F5CC00',
@@ -15,7 +13,7 @@ const baseTheme = createTheme({
 	},
 	typography: {
 		fontFamily: 'Parkinsans',
-		fontSize: 12,
+		fontSize: 11,
 		h6: {
 			fontWeight: "bold",
 		},
@@ -33,25 +31,27 @@ const baseTheme = createTheme({
 				}),
 			},
 		},
+		MuiFab: {
+			styleOverrides: {
+				root: ({ theme }) => ({
+					backgroundColor: theme.custom.btnColor.primary,
+					color: theme.custom.btnColor.secondary,
+
+				}),
+			},
+		},
 		MuiCard: {
 			styleOverrides: {
 				root: ({ theme }) => ({
-					backdropFilter: 'saturate(200%) blur(10px)',
-					backgroundColor: 'transparent',     //'transparent',  //'rgba(255, 255, 255, 0.5)',
-					boxShadow: theme.shadows[2],
-					backgroundImage: 'repeating-linear-gradient(50deg, transparent -500px, #2b374c14 150px)',
+					backdropFilter: 'blur(10px)',
+					borderRadius: 16,
+					boxShadow: theme.shadows[15],
+					background: 'rgba(255, 255, 255, 0.25)',
 
 				}),
 			}
 		},
 		MuiTimelineDot: {
-			styleOverrides: {
-				root: ({ theme }) => ({
-					backgroundColor: theme.custom.iconColor.primary,
-				}),
-			}
-		},
-		MuiAvatar: {
 			styleOverrides: {
 				root: ({ theme }) => ({
 					backgroundColor: theme.custom.iconColor.primary,
@@ -65,36 +65,25 @@ const baseTheme = createTheme({
 				}),
 			}
 		},
-		MuiSwitch: {
+		MuiStepConnector: {
 			styleOverrides: {
 				root: ({ theme }) => ({
-					width: 45,
-					height: 25,
-					padding: 0,
-					'& .MuiSwitch-switchBase': {
-						padding: 0,
-						margin: 2,
-						transitionDuration: '300ms',
-						'&.Mui-checked': {
-							color: theme.custom.iconColor.primary,
-						},
-					},
-
-					'& .MuiSwitch-track': {
-						borderRadius: 15,
-						opacity: 1,
-						transition: theme.transitions.create(['background-color'], {
-							duration: 500,
-						}),
-						...theme.applyStyles('dark', {
-							backgroundColor: theme.custom.iconColor.primary,
-							opacity: 0.3,
-						}),
+					"& .MuiStepConnector-line": {
+						borderColor: theme.custom.iconColor.primary,
+						borderWidth: 2,
 					},
 
 				}),
 			}
 		},
+		MuiAvatar: {
+			styleOverrides: {
+				root: ({ theme }) => ({
+					backgroundColor: theme.custom.iconColor.primary,
+				}),
+			}
+		},
+
 
 	},
 });
@@ -102,19 +91,6 @@ const baseTheme = createTheme({
 
 const lightTheme = createTheme({
 	...baseTheme,
-	shadows: [
-		...createTheme().shadows.slice(0, 1),
-		"2px 0px 5px rgba(0, 0, 0, 0.3)",
-		`rgba(38, 80, 110, 0.17) 0px -23px 25px 0px inset, 
-			 rgba(38, 80, 110, 0.15) 0px -36px 30px 0px inset,
-			 rgba(38, 80, 110, 0.1) 0px -79px 40px 0px inset,
-			 rgba(38, 80, 110, 0.06) 0px 2px 1px,
-			 rgba(38, 80, 110, 0.09) 0px 4px 2px, 
-			 rgba(38, 80, 110, 0.09) 0px 8px 4px,
-			 rgba(38, 80, 110, 0.09) 0px 16px 8px,
-			 rgba(38, 80, 110, 0.09) 0px 32px 16px`,
-		...createTheme().shadows.slice(3),
-	],
 	custom: {
 		iconColor: {
 			primary: 'rgb( 6, 16, 88, 1)',
@@ -124,7 +100,8 @@ const lightTheme = createTheme({
 			primary: 'rgb( 6, 16, 88, 0.6)',
 			secondary: '#F9F9F9',
 		},
-		background: `url(${lightImg})`,
+		background: 'linear-gradient(9deg, rgba(115, 143, 189, 1) 9%, rgba(168, 195, 212, 1) 27%, rgba(219, 214, 223, 1) 53%, rgba(238, 198, 199, 1) 72%, rgba(219, 136, 164, 1) 91%, rgba(204, 142, 177, 1) 98%)',
+
 	},
 
 });
@@ -134,19 +111,6 @@ const darkTheme = createTheme({
 	palette: {
 		mode: 'dark',
 	},
-	shadows: [
-		...createTheme().shadows.slice(0, 1),
-		"2px 0px 5px rgba(0, 0, 0, 0.3)",
-		`rgba(38, 110, 97, 0.17) 0px -23px 25px 0px inset, 
-			 rgba(38, 110, 97, 0.15) 0px -36px 30px 0px inset,
-			 rgba(38, 110, 97, 0.1) 0px -79px 40px 0px inset,
-			 rgba(38, 110, 97, 0.06) 0px 2px 1px,
-			 rgba(38, 110, 97, 0.09) 0px 4px 2px, 
-			 rgba(38, 110, 97, 0.09) 0px 8px 4px,
-			 rgba(38, 110, 97, 0.09) 0px 16px 8px,
-			 rgba(38, 110, 97, 0.09) 0px 32px 16px`,
-		...createTheme().shadows.slice(3),
-	],
 	custom: {
 		iconColor: {
 			primary: 'rgb(163, 192, 189)',
@@ -156,7 +120,8 @@ const darkTheme = createTheme({
 			primary: 'rgb( 163, 192, 189, 0.6)',
 			secondary: '#F9F9F9',
 		},
-		background: `url(${darkImg})`,
+
+		background: 'linear-gradient(9deg, rgba(20,40,80,1) 0%, rgba(39,73,109,1) 61%, rgba(12,123,147,1) 86%, rgba(0,168,204,1) 92%, rgba(21,174,206,1) 95%, rgba(193,218,223,1) 100%)',
 
 	},
 

@@ -17,7 +17,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import shadows from '@mui/material/styles/shadows.js';
 
 
 
@@ -54,14 +53,7 @@ function Portfolio() {
 	};
 	return (
 
-		<Card sx={{
-			margin: 2,
-			padding: 3,
-			overflow: "auto",
-			maxHeight: "75vh",
-		}}>
-			<Typography variant="h6">{data.pages.portfolio.title}</Typography>
-			<Typography >{data.pages.portfolio.description}</Typography>
+		<Card sx={{ height: '100%', }}>
 
 			<ArrowBackIosIcon fontSize='large' className="swiper-button-prev" />
 
@@ -93,11 +85,11 @@ function Portfolio() {
 
 								image={project.img}
 							/>
-							<CardContent key={`shortBody` + index}>
+							{/* <CardContent key={`shortBody` + index}>
 								<Typography variant="body2" sx={{ color: 'text.secondary' }}>
 									{project.shortDescription}
 								</Typography>
-							</CardContent>
+							</CardContent> */}
 							<CardActions disableSpacing>
 								<IconButton key={`gitButton` + index} aria-label="github" href={project.reference}
 									target="_blank">

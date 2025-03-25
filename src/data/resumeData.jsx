@@ -1,9 +1,13 @@
 import CottageRoundedIcon from '@mui/icons-material/CottageRounded';
-import PhoneEnabledIcon from '@mui/icons-material/PhoneEnabled';
 import CakeIcon from '@mui/icons-material/Cake';
 import DraftsRoundedIcon from '@mui/icons-material/DraftsRounded';
 import PublicIcon from '@mui/icons-material/Public';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
+import PianoIcon from '@mui/icons-material/Piano';
+import PoolIcon from '@mui/icons-material/Pool';
+import SpaIcon from '@mui/icons-material/Spa';
+import SportsVolleyballIcon from '@mui/icons-material/SportsVolleyball';
+import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 
 export default {
 	settings: {
@@ -17,13 +21,13 @@ export default {
 		languages: {
 			label: "Language",
 			options: [
-				{ value: "en", name: "English" },
+				{ value: "gb", name: "English" },
 				{ value: "it", name: "Italiano" },
 				{ value: "de", name: "Deutsch" },
 			],
 		},
 	},
-	en: {
+	gb: {
 		profile: {
 			title: "ALESSIA AZZOLINA",
 			subheader: "Software Developer",
@@ -35,7 +39,7 @@ export default {
 				{ title: "Nationality", icon: <PublicIcon fontSize="small" />, content: "Italian", fontSize: "0.9em" },
 			],
 			textBtn: "download CV ",
-			iconBtn: <FileDownloadIcon sx={{ marginLeft: "10px" }} fontSize="small" />,
+			iconBtn: <FileDownloadIcon />,
 		},
 		header: {
 			home: "/my-portfolio",
@@ -69,7 +73,14 @@ export default {
 				},
 				section3: {
 					title: "Hobbies",
-					description: "TODO",
+					items: [
+						{ title: "Play Piano", icon: <PianoIcon /> },
+						{ title: "Swimming", icon: <PoolIcon /> },
+						{ title: "Meditation", icon: <SpaIcon /> },
+						{ title: "Crocheting", icon: <SportsVolleyballIcon /> },
+						{ title: "Reading", icon: <AutoStoriesIcon /> }
+					],
+
 				}
 
 			},
@@ -81,17 +92,17 @@ export default {
 						{
 							title: "JAVA developer professional course",
 							date: "09/12/2020 – 22/01/2021 Gamma Innovation Academy",
-							content: "In this course I acquired skills for developing stack-based applications and methodologies to work within a software team developer operating in corporate contexts (banking, insurance and other industries). \nI deepened my knowledge of various data structures such as Array, Linked List, Binary Tree, Hashmap, Hashset."
+							//content: "In this course I acquired skills for developing stack-based applications and methodologies to work within a software team developer operating in corporate contexts (banking, insurance and other industries). \nI deepened my knowledge of various data structures such as Array, Linked List, Binary Tree, Hashmap, Hashset."
 						},
 						{
 							title: "Web Programming with Python and JavaScript",
 							date: "13/04/2020 – 20/11/2020",
-							content: "I learned how to build web pages using HTML and CSS, how to use Git and GitHub to keep track of changes to the code and collaborate with others. I gained a basic understanding of the Python language, how to manipulate its data types and build functions. I learned the use of Python's Django framework to create dynamic applications and I developed my web-design skills by working on several projects during the course. I used Django Models to communicate with databases using Python classes and objects."
+							//content: "I learned how to build web pages using HTML and CSS, how to use Git and GitHub to keep track of changes to the code and collaborate with others. I gained a basic understanding of the Python language, how to manipulate its data types and build functions. I learned the use of Python's Django framework to create dynamic applications and I developed my web-design skills by working on several projects during the course. I used Django Models to communicate with databases using Python classes and objects."
 						},
 						{
 							title: "Bachelor's degree in Mathematics and Applications",
 							date: "28/11/2018 - Università degli studi Milano Bicocca",
-							content: "I gained a solid preparation in the Mathematics disciplines: analysis, algebra, geometry, probability calculation, physics. \nIn my thesis I studied a class of functions, “spline”, that are used in applications requiring data interpolation and smoothing. I built a mathematical model using Matlab to reproduce a desired shape starting from a set of points."
+							//content: "I gained a solid preparation in the Mathematics disciplines: analysis, algebra, geometry, probability calculation, physics. \nIn my thesis I studied a class of functions, “spline”, that are used in applications requiring data interpolation and smoothing. I built a mathematical model using Matlab to reproduce a desired shape starting from a set of points."
 						},
 					]
 				},
@@ -101,12 +112,12 @@ export default {
 						{
 							title: "Java Software Developer",
 							date: "01/02/2021 - present - Gamma Innovation",
-							content: "I work on an application that automates the real estate appraisal process used by business banking customers. I have developed various functionalities including customised access according to different user profiles, automated communication with providers on the market, billing process monitoring. \nI mainly focus on the realisation of both SOAP and RESTful web services in Java using the Spring framework."
+							//content: "I work on an application that automates the real estate appraisal process used by business banking customers. I have developed various functionalities including customised access according to different user profiles, automated communication with providers on the market, billing process monitoring. \nI mainly focus on the realisation of both SOAP and RESTful web services in Java using the Spring framework."
 						},
 						{
 							title: "Systems analyst",
 							date: "01/10/2018 – 25/03/2020 Minsait, an Indra company",
-							content: "I have worked on the implementation of integration systems using the TIBCO BusinessWorks 6 platform. I developed and managed web services to integrate customer systems, including databases, SAP and TIBCO itself. In addition, I was responsible for migrating existing applications to the latest versions of TIBCO. Each development phase was detailed through the drafting of technical documentation."
+							//content: "I have worked on the implementation of integration systems using the TIBCO BusinessWorks 6 platform. I developed and managed web services to integrate customer systems, including databases, SAP and TIBCO itself. In addition, I was responsible for migrating existing applications to the latest versions of TIBCO. Each development phase was detailed through the drafting of technical documentation."
 						},
 					]
 				},
@@ -133,11 +144,11 @@ export default {
 						reference: "https://www.gammainnovation.it/prodotti/perizie-web/"
 					},
 					{
-						title: "Projekt 2",
+						title: "Currency Converter",
 						subheader: "JAVA",
 						shortDescription: "TODO",
 						longDescription: "",
-						img: "img/todo.jpg",
+						img: "img/currencyConverter.png",
 						reference: "https://www.google.com"
 					},
 					{
@@ -207,7 +218,14 @@ export default {
 				},
 				section3: {
 					title: "Tempo libero",
-					description: "TODO",
+					items: [
+						{ title: "Pianoforte", icon: <PianoIcon /> },
+						{ title: "Piscina", icon: <PoolIcon /> },
+						{ title: "Meditazione", icon: <SpaIcon /> },
+						{ title: "Uncinetto", icon: <SportsVolleyballIcon /> },
+						{ title: "Letture", icon: <AutoStoriesIcon /> }
+					],
+
 				}
 
 			},
@@ -272,11 +290,11 @@ export default {
 						reference: "https://www.gammainnovation.it/prodotti/perizie-web/"
 					},
 					{
-						title: "Projekt 2",
+						title: "Currency Converter",
 						subheader: "JAVA",
 						shortDescription: "TODO",
-						longDescription: "LONG DESCRIPTION",
-						img: "img/todo.jpg",
+						longDescription: "",
+						img: "img/currencyConverter.png",
 						reference: "https://www.google.com"
 					},
 					{
@@ -346,8 +364,15 @@ export default {
 					],
 				},
 				section3: {
-					title: "Hobbys",
-					description: "TODO",
+					title: "Hobbies",
+					items: [
+						{ title: "Play Piano", icon: <PianoIcon /> },
+						{ title: "Swimming", icon: <PoolIcon /> },
+						{ title: "Meditation", icon: <SpaIcon /> },
+						{ title: "Crocheting", icon: <SportsVolleyballIcon /> },
+						{ title: "Reading", icon: <AutoStoriesIcon /> }
+					],
+
 				}
 
 			},
@@ -411,11 +436,11 @@ export default {
 						reference: "https://www.gammainnovation.it/prodotti/perizie-web/"
 					},
 					{
-						title: "Projekt 2",
+						title: "Currency Converter",
 						subheader: "JAVA",
 						shortDescription: "TODO",
-						longDescription: "LONG DESCRIPTION",
-						img: "img/todo.jpg",
+						longDescription: "",
+						img: "img/currencyConverter.png",
 						reference: "https://www.google.com"
 					},
 					{

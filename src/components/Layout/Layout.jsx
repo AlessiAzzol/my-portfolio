@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
-import Header from "./../Header/Header.jsx";
-import { useLanguage } from "./../../context/LanguageContext.jsx";
+import Header from "../header/Header.jsx";
+import { useLanguage } from "../../context/LanguageContext.jsx";
 import Grid from "@mui/material/Grid2";
 
 function Layout() {

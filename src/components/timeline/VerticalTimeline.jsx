@@ -6,7 +6,7 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import Typography from '@mui/material/Typography';
 
-function CustomTimeline({ children }) {
+function VerticalTimeline({ children }) {
 	return (
 		<Timeline sx={{
 			marginBottom: 0,
@@ -25,10 +25,10 @@ function CustomTimeline({ children }) {
 							<TimelineConnector />
 						)}
 					</TimelineSeparator>
-					<TimelineContent sx={{ paddingTop: 0, }} color="textSecondary">
-						<Typography sx={{ fontSize: child.fontSize }}><strong>{child.title}</strong></Typography>
-						<Typography variant="caption"><em>{child.date}</em></Typography>
-						<Typography sx={{ fontSize: child.fontSize }}>{child.content}</Typography>
+					<TimelineContent sx={{ paddingTop: 0, }} >
+						<Typography ><>{child.title}</></Typography>
+						<Typography variant="caption" color='textSecondary'><em>{child.date}</em></Typography>
+						<Typography color='textSecondary'>{child.content}</Typography>
 					</TimelineContent>
 				</TimelineItem>
 			))
@@ -37,4 +37,4 @@ function CustomTimeline({ children }) {
 	);
 }
 
-export default CustomTimeline;
+export default VerticalTimeline;

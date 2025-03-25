@@ -1,7 +1,8 @@
 import { Card, CardHeader, CardMedia, CardContent, CardActions, Button, Avatar } from '@mui/material';
-import CustomTimeline from '../Timeline/CustomTimeline.jsx';
-import { useLanguage } from "./../../context/LanguageContext.jsx";
+import VerticalTimeline from '../components/timeline/VerticalTimeline.jsx';
+import { useLanguage } from "../context/LanguageContext.jsx";
 import { useTheme } from '@mui/material';
+import { Fab } from '@mui/material';
 
 function Profile(props) {
 	const { data } = useLanguage();
@@ -29,18 +30,20 @@ function Profile(props) {
 	return (
 		<Card sx={{
 			padding: 0,
-			margin: 2,
-			maxHeight: '85vh',
-			overflow: "auto",
+			position: 'fixed',
+			width: '50vh',
+			borderRadius: '0% 50% 0% 0% / 100% 50% 50% 0%;',
+			transform: 'translate(0%, 50%)',
 		}}>
 			<CardHeader title={data.profile.title} subheader={data.profile.subheader} />
-			<CardMedia image={props.img} sx={{ clipPath: "polygon(0 20%, 100% 0, 100% 80%, 0% 100%)", height: "180px", marginTop: "-25px" }} />
-			<Avatar sx={{ marginTop: "-25px", marginLeft: "10px", fontFamily: 'Bonbon', fontWeight: 'bold', fontSize: 'xx-large', }}>A</Avatar>
+			{/* <Avatar sx={{ marginTop: "-25px", marginLeft: "10px", fontFamily: 'Bonbon', fontWeight: 'bold', fontSize: 'xx-large', }}>A</Avatar> */}
 			<CardContent sx={{ padding: 0, fontSize: 7, marginBottom: 0 }}>
-				<CustomTimeline children={data.profile.menu} />
+				<VerticalTimeline children={data.profile.menu} />
 			</CardContent>
-			<CardActions sx={{ paddingTop: 0 }}>
-				<Button size="small" onClick={onButtonClick}>{data.profile.textBtn} {data.profile.iconBtn}</Button>
+			<CardActions sx={{ float: 'right' }}>
+				<Fab aria-label={data.profile.textBtn} onClick={onButtonClick}>
+					{data.profile.iconBtn}
+				</Fab>
 			</CardActions>
 		</Card>
 	);

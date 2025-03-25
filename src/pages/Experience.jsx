@@ -1,6 +1,6 @@
 import { Typography, Card } from '@mui/material';
 import Grid from '@mui/material/Grid2';
-import CustomTimeline from '../components/Timeline/CustomTimeline.jsx';
+import VerticalTimeline from '../components/Timeline/VerticalTimeline.jsx';
 import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
 import SchoolIcon from '@mui/icons-material/School';
 import Avatar from '@mui/material/Avatar';
@@ -22,14 +22,14 @@ function Resume() {
 						<Typography variant="h6">{data.pages.resume.experience.title}</Typography>
 					</Grid>
 
-					<CustomTimeline children={data.pages.resume.experience.section} />
+					<VerticalTimeline children={data.pages.resume.experience.section} />
 				</Grid>
 				<Grid item="true" size={{ xs: 12, sm: 12, md: 6 }}>
 					<Grid container alignItems="center" gap={1}>
 						<Avatar><SchoolIcon /></Avatar>
 						<Typography variant="h6">{data.pages.resume.education.title}</Typography>
 					</Grid>
-					<CustomTimeline children={data.pages.resume.education.section} />
+					<VerticalTimeline children={data.pages.resume.education.section} />
 				</Grid>
 			</Grid>
 		</Card >
