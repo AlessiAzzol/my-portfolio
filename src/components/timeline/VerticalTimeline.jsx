@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 function VerticalTimeline({ children }) {
 	return (
 		<Timeline sx={{
-			marginBottom: 0,
+			margin: 0,
 			paddingBottom: 0,
 			[`& .${timelineItemClasses.root}:before`]: {
 				flex: 0,

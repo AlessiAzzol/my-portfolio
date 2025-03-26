@@ -67,7 +67,7 @@ function Contact() {
 			<Typography variant="h6">{data.pages.contact.title}</Typography>
 			<Box component="form" autoComplete="off" noValidate onSubmit={handleSubmit}>
 				<Grid container spacing={3} direction="row">
-					<Grid item="true" size={4} >
+					<Grid size={4} >
 						<TextField required
 							fullWidth
 							variant="outlined"
@@ -104,7 +104,7 @@ function Contact() {
 
 						/>
 					</Grid>
-					<Grid item="true" size={8} >
+					<Grid size={8} >
 						<TextField required
 							id="outlined-multiline"
 							variant="outlined"
@@ -117,7 +117,7 @@ function Contact() {
 							value={formData.message}
 							onChange={handleChange}
 						/>
-						<Grid item="true" sx={{ display: "flex", justifyContent: "flex-end", }}>
+						<Grid sx={{ display: "flex", justifyContent: "flex-end", }}>
 							<Button type="submit" variant="contained"
 								disabled={emailError || !formData.email || !formData.name || !formData.surname || !formData.message}>
 								Submit

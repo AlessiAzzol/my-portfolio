@@ -10,13 +10,13 @@ function Hobbies() {
 	const { data } = useLanguage();
 
 	return (
-		<Card sx={{ height: '100%', boxShadow: 'none', background: 'transparent', backdropFilter: 'none' }} >
+		<Card >
 			<Stack direction="row" spacing={2} >
-				<CardHeader
+				<CardHeader sx={{ background: 'transparent', }}
 					avatar={<Avatar><CategoryIcon /></Avatar>}
 					title={data.pages.home.section3.title}
 				/>
-				<CardContent sx={{ width: '100%' }}>
+				<CardContent sx={{ width: '100%', background: 'transparent', }}>
 					<HorizontalStepper children={data.pages.home.section3.items} />
 
 				</CardContent>

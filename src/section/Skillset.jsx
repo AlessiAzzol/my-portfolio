@@ -9,13 +9,13 @@ function Skillset() {
 	const { data } = useLanguage();
 
 	return (
-		<Card sx={{ height: '100%', boxShadow: 'none', background: 'transparent', backdropFilter: 'none' }} >
+		<Card >
 
-			<CardHeader
+			<CardHeader sx={{ background: 'transparent', }}
 				avatar={<Avatar><CodeIcon /></Avatar>}
 				title={data.pages.home.section2.title}
 			/>
-			<CardContent>
+			<CardContent sx={{ background: 'transparent', }}>
 				<Stack direction="row" spacing={1} useFlexGap sx={{ display: "flex", flexWrap: "wrap", }}>
 					{data.pages.home.section2.skills?.map((skill, index) => (
 						<Chip key={index} label={skill.title} />

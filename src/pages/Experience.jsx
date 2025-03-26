@@ -1,6 +1,6 @@
 import { Typography, Card } from '@mui/material';
 import Grid from '@mui/material/Grid2';
-import VerticalTimeline from '../components/Timeline/VerticalTimeline.jsx';
+import VerticalTimeline from '../components/timeline/VerticalTimeline.jsx';
 import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
 import SchoolIcon from '@mui/icons-material/School';
 import Avatar from '@mui/material/Avatar';
@@ -16,7 +16,7 @@ function Resume() {
 			maxHeight: "75vh",
 		}}>
 			<Grid container direction="row" sx={{ justifyContent: "space-between", }}>
-				<Grid item="true" size={{ xs: 12, sm: 12, md: 6 }}>
+				<Grid size={{ xs: 12, sm: 12, md: 6 }}>
 					<Grid container alignItems="center" gap={1}>
 						<Avatar><WorkHistoryIcon /></Avatar>
 						<Typography variant="h6">{data.pages.resume.experience.title}</Typography>
@@ -24,7 +24,7 @@ function Resume() {
 
 					<VerticalTimeline children={data.pages.resume.experience.section} />
 				</Grid>
-				<Grid item="true" size={{ xs: 12, sm: 12, md: 6 }}>
+				<Grid size={{ xs: 12, sm: 12, md: 6 }}>
 					<Grid container alignItems="center" gap={1}>
 						<Avatar><SchoolIcon /></Avatar>
 						<Typography variant="h6">{data.pages.resume.education.title}</Typography>
