@@ -9,9 +9,9 @@ function Skillset() {
 	const { data } = useLanguage();
 
 	return (
-		<Card >
+		<Card sx={{ height: '100%', }}>
 
-			<CardHeader sx={{ background: 'transparent', }}
+			<CardHeader sx={{ background: 'transparent' }}
 				avatar={<Avatar><CodeIcon /></Avatar>}
 				title={data.pages.home.section2.title}
 			/>

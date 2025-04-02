@@ -6,12 +6,12 @@ function About() {
 	const { data } = useLanguage();
 
 	return (
-		<Card >
+		<Card sx={{ height: '100%', }}>
 			<CardHeader sx={{ background: 'transparent', }}
 				avatar={<Avatar sx={{ fontFamily: 'Bonbon', fontWeight: 'bold', fontSize: 'xx-large', }}>A</Avatar>}
 				title={data.pages.home.section1.title}
 			/>
-			<CardContent sx={{ background: 'transparent', }}>
+			<CardContent sx={{ background: 'transparent' }}>
 				<Typography >{data.pages.home.section1.description}</Typography>
 			</CardContent>
 

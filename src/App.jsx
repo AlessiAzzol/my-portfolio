@@ -15,6 +15,8 @@ import Mode from './section/Mode.jsx';
 import Projects from './section/Projects.jsx';
 import WorkExperience from './section/WorkExperience.jsx';
 import About from './section/About.jsx';
+import Box from '@mui/material/Box';
+
 
 function App() {
 
@@ -30,17 +32,25 @@ function App() {
 						display: "flex",
 						justifyContent: "center",
 
-						backgroundImage: (theme) => theme.custom.background,
+						//background: (theme) => theme.custom.background,
+						backgroundColor: (theme) => theme.custom.backgroundColor,
+						backgroundSize: 'cover',
 						overflow: "auto",
 					}}>
 
-					<Grid size={{ xs: 3, }} ><img src={profile}
-						style={{
-							width: '50vh',
-							height: 'auto',
-							position: 'fixed',
-							borderRadius: '0% 40% 40% 0% / 0% 50% 50% 0%',
-						}} />
+					<Grid size={{ xs: 3, }} >
+						<Box
+							component="img"
+							src={profile}
+							sx={{
+								width: '50vh',
+								height: 'auto',
+								position: 'fixed',
+								borderRadius: '0% 40% 40% 0% / 0% 50% 50% 0%',
+								boxShadow: 15,
+							}}
+						/>
+
 						<Profile /></Grid>
 					<Grid container size={{ xs: 9 }} spacing={1} sx={{ padding: 1 }} >
 
@@ -58,19 +68,18 @@ function App() {
 							<Education />
 						</Grid>
 						<Grid container size={{ xs: 7, }} >
-							<Grid size={{ xs: 9, }} >
+							<Grid size={{ xs: 10, }} >
 								<WorkExperience />
 							</Grid>
-							<Grid container size={{ xs: 3, }} direction={"column"}>
-								<Grid size={{ xs: 12, }} >
+							<Grid container size={{ xs: 2, }} direction={"column"}>
 
-								</Grid>
 								<Grid size={{ xs: 12, }} >
 									<Language></Language>
 								</Grid>
 								<Grid size={{ xs: 12, }} >
 									<Mode />
 								</Grid>
+
 							</Grid>
 							<Grid size={{ xs: 12, }} >
 								<Hobbies />

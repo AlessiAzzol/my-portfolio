@@ -1,15 +1,19 @@
-import { Card, CardHeader, CardMedia, CardContent, CardActions, Button, Avatar } from '@mui/material';
+import { Card, CardHeader, CardContent, CardActions, } from '@mui/material';
 import VerticalTimeline from '../components/timeline/VerticalTimeline.jsx';
 import { useLanguage } from "../context/LanguageContext.jsx";
 import { useTheme } from '@mui/material';
-import { Fab } from '@mui/material';
 import SmsIcon from '@mui/icons-material/Sms';
-import { Dialog, DialogActions, Slide } from '@mui/material';
 import ContactPage from '../pages/Contact.jsx';
 import React from 'react';
+import Box from '@mui/material/Box';
+import AnimatedFab from '../components/animations/AnimatedFab.jsx';
+import AnimatedDialog from '../components/animations/AnimatedDialog.jsx';
+import { useState } from 'react';
 
 function Profile(props) {
 	const { data } = useLanguage();
+
+	const theme = useTheme();
 	const language = localStorage.getItem("language");
 
 	const onButtonClick = () => {
@@ -32,20 +36,11 @@ function Profile(props) {
 	};
 
 
-	const Transition = React.forwardRef(function Transition(props, ref) {
-		return <Slide direction="up" ref={ref} {...props} />;
-	});
 
-	const [open, setOpen] = React.useState(false);
+	const [openDialog, setOpen] = useState(false);
 
-	const handleClickOpen = () => {
-		setOpen(true);
-	};
 
-	const handleClose = () => {
-		setOpen(false);
-	};
-
+	const handleDialog = () => setOpen(!openDialog);
 
 	return (
 
@@ -57,34 +52,63 @@ function Profile(props) {
 				borderRadius: '0% 50% 0% 0% / 100% 50% 50% 0%;',
 				transform: 'translate(0%, 50%)',
 			}}>
-				<CardHeader title={data.profile.title} subheader={data.profile.subheader} />
+				<CardHeader
+					sx={{
+						background: `linear-gradient(to top, ${theme.custom.cardBackground}, rgba(255, 255, 255, 0.2))`,
+					}}
+					title={data.profile.title} subheader={data.profile.subheader} />
 				{/* <Avatar sx={{ marginTop: "-25px", marginLeft: "10px", fontFamily: 'Bonbon', fontWeight: 'bold', fontSize: 'xx-large', }}>A</Avatar> */}
-				<CardContent sx={{ padding: 0, fontSize: 7, margin: 0 }}>
+				<CardContent sx={{ padding: 0, fontSize: 7, margin: 0, borderBottomRightRadius: 16, borderBottomLeftRadius: 16, }}>
 					<VerticalTimeline children={data.profile.menu} />
 				</CardContent>
-				<CardActions sx={{ display: 'flex', justifyContent: 'space-between' }}>
-					<Fab aria-label={data.profile.textBtn} onClick={handleClickOpen}>
+				<CardActions sx={{ display: 'flex', justifyContent: 'space-between', margin: '0 8px', }}>
+					<AnimatedFab onClick={handleDialog}>
 						<SmsIcon></SmsIcon>
-					</Fab>
+					</AnimatedFab>
+					<Box sx={{
+						'--bck': (theme) => theme.custom.cardBackground,
+						width: '60%',
+						height: '100%',
+						background: 'var(--bck)',
+						borderBottomRightRadius: 20,
+						borderBottomLeftRadius: 20,
+						position: 'relative',
+						'&::before': {
+							content: '""',
+							position: 'absolute',
+							backgroundColor: 'transparent',
+							right: '-60px',
+							height: '35px',
+							width: '60px',
+							borderTopLeftRadius: 30,
+							boxShadow: ' -30px 0 0 0 var(--bck)',
+						},
+						'&::after': {
+							content: '""',
+							position: 'absolute',
+							backgroundColor: 'transparent',
+							left: '-60px',
+							height: '35px',
+							width: '60px',
+							borderTopRightRadius: 30,
+							boxShadow: ' 30px 0 0 0 var(--bck)',
+						}
+					}}></Box>
 
-					<Fab aria-label={data.profile.textBtn} onClick={onButtonClick}>
+					<AnimatedFab onClick={onButtonClick}>
 						{data.profile.iconBtn}
-					</Fab>
+					</AnimatedFab>
 
 				</CardActions>
 			</Card>
 
-			<Dialog
-				open={open}
-				slots={{ transition: Transition }}
-				onClose={handleClose}
-				aria-describedby="alert-dialog-slide-description"
+			<AnimatedDialog
+				open={openDialog}
+				onClick={handleDialog}
 			>
 				<ContactPage />
-				<DialogActions>
-					<Button onClick={handleClose}>Back</Button>
-				</DialogActions>
-			</Dialog>
+
+			</AnimatedDialog>
 		</>
 	);
 };

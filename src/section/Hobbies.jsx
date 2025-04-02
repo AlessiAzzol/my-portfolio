@@ -12,11 +12,11 @@ function Hobbies() {
 	return (
 		<Card >
 			<Stack direction="row" spacing={2} >
-				<CardHeader sx={{ background: 'transparent', }}
+				<CardHeader sx={{ background: 'transparent', padding: 0 }}
 					avatar={<Avatar><CategoryIcon /></Avatar>}
 					title={data.pages.home.section3.title}
 				/>
-				<CardContent sx={{ width: '100%', background: 'transparent', }}>
+				<CardContent sx={{ width: '100%', background: 'transparent', padding: 1 }}>
 					<HorizontalStepper children={data.pages.home.section3.items} />
 
 				</CardContent>

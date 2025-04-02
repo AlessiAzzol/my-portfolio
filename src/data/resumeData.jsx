@@ -57,7 +57,7 @@ export default {
 					description: "I am a creative thinker who enjoys exploring innovative solutions from different perspectives. With a strong background in backend development, I bring strong analytical skills and the ability to approach challenges both independently and collaboratively.",
 				},
 				section2: {
-					title: "Services",
+					title: "Skills",
 					description: "",
 					skills: [
 						{ title: "JAVA", level: 100 },
@@ -88,36 +88,60 @@ export default {
 				title: "Experience",
 				education: {
 					title: "Education and training",
-					section: [
+					sectionShort: [
 						{
 							title: "JAVA developer professional course",
 							date: "09/12/2020 – 22/01/2021 Gamma Innovation Academy",
-							//content: "In this course I acquired skills for developing stack-based applications and methodologies to work within a software team developer operating in corporate contexts (banking, insurance and other industries). \nI deepened my knowledge of various data structures such as Array, Linked List, Binary Tree, Hashmap, Hashset."
 						},
 						{
 							title: "Web Programming with Python and JavaScript",
 							date: "13/04/2020 – 20/11/2020",
-							//content: "I learned how to build web pages using HTML and CSS, how to use Git and GitHub to keep track of changes to the code and collaborate with others. I gained a basic understanding of the Python language, how to manipulate its data types and build functions. I learned the use of Python's Django framework to create dynamic applications and I developed my web-design skills by working on several projects during the course. I used Django Models to communicate with databases using Python classes and objects."
 						},
 						{
 							title: "Bachelor's degree in Mathematics and Applications",
 							date: "28/11/2018 - Università degli studi Milano Bicocca",
-							//content: "I gained a solid preparation in the Mathematics disciplines: analysis, algebra, geometry, probability calculation, physics. \nIn my thesis I studied a class of functions, “spline”, that are used in applications requiring data interpolation and smoothing. I built a mathematical model using Matlab to reproduce a desired shape starting from a set of points."
+						},
+					],
+					sectionLong: [
+						{
+							title: "JAVA developer professional course",
+							date: "09/12/2020 – 22/01/2021 Gamma Innovation Academy",
+							content: "In this course I acquired skills for developing stack-based applications and methodologies to work within a software team developer operating in corporate contexts (banking, insurance and other industries). \nI deepened my knowledge of various data structures such as Array, Linked List, Binary Tree, Hashmap, Hashset."
+						},
+						{
+							title: "Web Programming with Python and JavaScript",
+							date: "13/04/2020 – 20/11/2020",
+							content: "I learned how to build web pages using HTML and CSS, how to use Git and GitHub to keep track of changes to the code and collaborate with others. I gained a basic understanding of the Python language, how to manipulate its data types and build functions. I learned the use of Python's Django framework to create dynamic applications and I developed my web-design skills by working on several projects during the course. I used Django Models to communicate with databases using Python classes and objects."
+						},
+						{
+							title: "Bachelor's degree in Mathematics and Applications",
+							date: "28/11/2018 - Università degli studi Milano Bicocca",
+							content: "I gained a solid preparation in the Mathematics disciplines: analysis, algebra, geometry, probability calculation, physics. \nIn my thesis I studied a class of functions, “spline”, that are used in applications requiring data interpolation and smoothing. I built a mathematical model using Matlab to reproduce a desired shape starting from a set of points."
 						},
 					]
 				},
 				experience: {
 					title: "Work experience",
-					section: [
+					sectionShort: [
 						{
 							title: "Java Software Developer",
 							date: "01/02/2021 - present - Gamma Innovation",
-							//content: "I work on an application that automates the real estate appraisal process used by business banking customers. I have developed various functionalities including customised access according to different user profiles, automated communication with providers on the market, billing process monitoring. \nI mainly focus on the realisation of both SOAP and RESTful web services in Java using the Spring framework."
 						},
 						{
 							title: "Systems analyst",
 							date: "01/10/2018 – 25/03/2020 Minsait, an Indra company",
-							//content: "I have worked on the implementation of integration systems using the TIBCO BusinessWorks 6 platform. I developed and managed web services to integrate customer systems, including databases, SAP and TIBCO itself. In addition, I was responsible for migrating existing applications to the latest versions of TIBCO. Each development phase was detailed through the drafting of technical documentation."
+						},
+					],
+					sectionLong: [
+						{
+							title: "Java Software Developer",
+							date: "01/02/2021 - present - Gamma Innovation",
+							content: "I work on an application that automates the real estate appraisal process used by business banking customers. I have developed various functionalities including customised access according to different user profiles, automated communication with providers on the market, billing process monitoring. \nI mainly focus on the realisation of both SOAP and RESTful web services in Java using the Spring framework."
+						},
+						{
+							title: "Systems analyst",
+							date: "01/10/2018 – 25/03/2020 Minsait, an Indra company",
+							content: "I have worked on the implementation of integration systems using the TIBCO BusinessWorks 6 platform. I developed and managed web services to integrate customer systems, including databases, SAP and TIBCO itself. In addition, I was responsible for migrating existing applications to the latest versions of TIBCO. Each development phase was detailed through the drafting of technical documentation."
 						},
 					]
 				},
@@ -140,7 +164,7 @@ export default {
 							"<li>Gestione anagrafica dei periti interni della Banca, con eventuale processo ad hoc</li>" +
 							"<li>Monitoraggio del processo di fatturazione</li>" +
 							"<li>Nativamente integrata con gli altri sistemi banca che si interfacciano con il mondo perizie</li></ul>",
-						img: "img/perizieWeb.png",
+						img: "my-portfolio/img/perizieWeb.png",
 						reference: "https://www.gammainnovation.it/prodotti/perizie-web/"
 					},
 					{
@@ -148,7 +172,7 @@ export default {
 						subheader: "JAVA",
 						shortDescription: "TODO",
 						longDescription: "",
-						img: "img/currencyConverter.png",
+						img: "my-portfolio/img/currencyConverter.png",
 						reference: "https://www.google.com"
 					},
 					{
@@ -156,7 +180,7 @@ export default {
 						subheader: "JAVA",
 						shortDescription: "TODO",
 						longDescription: "LONG DESCRIPTION",
-						img: "img/todo.jpg",
+						img: "my-portfolio/img/todo.jpg",
 						reference: "https://www.google.com"
 					},
 				],
@@ -202,7 +226,7 @@ export default {
 					description: "Sono una persona creativa che ama esplorare soluzioni innovative da diverse prospettive. Con un solido background nello sviluppo backend, possiedo forti capacità analitiche e l'abilità di affrontare le sfide sia in modo indipendente che collaborativo.",
 				},
 				section2: {
-					title: "Servizi",
+					title: "Competenze",
 					description: "",
 					skills: [
 						{ title: "JAVA", level: 100 },
@@ -233,7 +257,21 @@ export default {
 				title: "Esperienza",
 				education: {
 					title: "Educazione e formazione",
-					section: [
+					sectionShort: [
+						{
+							title: "Corso professionale JAVA",
+							date: "09/12/2020 – 22/01/2021 Gamma Innovation Academy",
+						},
+						{
+							title: "Corso di programmazione web con Python e JavaScript",
+							date: "13/04/2020 – 20/11/2020",
+						},
+						{
+							title: "Laurea triennale in Matematica e applicazioni",
+							date: "28/11/2018 - Università degli studi Milano Bicocca",
+						},
+					],
+					sectionLong: [
 						{
 							title: "Corso professionale JAVA",
 							date: "09/12/2020 – 22/01/2021 Gamma Innovation Academy",
@@ -253,7 +291,17 @@ export default {
 				},
 				experience: {
 					title: "Esperienza lavorativa",
-					section: [
+					sectionShort: [
+						{
+							title: "Sviluppatrice Backend - Java",
+							date: "01/02/2021 - present - Gamma Innovation",
+						},
+						{
+							title: "Systems analyst",
+							date: "01/10/2018 – 25/03/2020 Minsait, an Indra company",
+						},
+					],
+					sectionLong: [
 						{
 							title: "Sviluppatrice Backend - Java",
 							date: "01/02/2021 - present - Gamma Innovation",
@@ -286,7 +334,7 @@ export default {
 							"<li>Gestione anagrafica dei periti interni della Banca, con eventuale processo ad hoc</li>" +
 							"<li>Monitoraggio del processo di fatturazione</li>" +
 							"<li>Nativamente integrata con gli altri sistemi banca che si interfacciano con il mondo perizie</li></ul>",
-						img: "img/perizieWeb.png",
+						img: "my-portfolio/img/perizieWeb.png",
 						reference: "https://www.gammainnovation.it/prodotti/perizie-web/"
 					},
 					{
@@ -294,7 +342,7 @@ export default {
 						subheader: "JAVA",
 						shortDescription: "TODO",
 						longDescription: "",
-						img: "img/currencyConverter.png",
+						img: "my-portfolio/img/currencyConverter.png",
 						reference: "https://www.google.com"
 					},
 					{
@@ -302,7 +350,7 @@ export default {
 						subheader: "JAVA",
 						shortDescription: "TODO",
 						longDescription: "LONG DESCRIPTION",
-						img: "img/todo.jpg",
+						img: "my-portfolio/img/todo.jpg",
 						reference: "https://www.google.com"
 					},
 				],
@@ -349,7 +397,7 @@ export default {
 					description: "Ich bin eine kreative Person, die gerne innovative Lösungen aus verschiedenen Perspektiven erforscht. Mit einem starken Hintergrund in der Backend-Entwicklung, bringe ich ausgeprägte analytische Fähigkeiten sowie die Fähigkeit mit und gehe Herausforderungen sowohl eigenständig als auch im Team an.",
 				},
 				section2: {
-					title: "Leistungen",
+					title: "Kompetenzen",
 					description: "",
 					skills: [
 						{ title: "JAVA", level: 100 },
@@ -380,7 +428,21 @@ export default {
 				title: "Erfahrung",
 				education: {
 					title: "Erziehung und Ausbildung",
-					section: [
+					sectionShort: [
+						{
+							title: "Java-Entwickler Profikurs",
+							date: "09/12/2020 – 22/01/2021  Gamma Innovation Academy",
+						},
+						{
+							title: "Web Programming with Python and JavaScript",
+							date: "13/04/2020 – 20/11/2020",
+						},
+						{
+							title: "Bachelor's degree in Mathematics and Applications",
+							date: "28/11/2018 - Università degli studi Milano Bicocca",
+						},
+					],
+					sectionLong: [
 						{
 							title: "Java-Entwickler Profikurs",
 							date: "09/12/2020 – 22/01/2021  Gamma Innovation Academy",
@@ -400,7 +462,17 @@ export default {
 				},
 				experience: {
 					title: "Berufserfahrung",
-					section: [
+					sectionShort: [
+						{
+							title: "Java Softwareentwicklerin",
+							date: "01/02/2021 - present - Gamma Innovation",
+						},
+						{
+							title: "Systems analyst",
+							date: "01/10/2018 – 25/03/2020 Minsait, an Indra company",
+						},
+					],
+					sectionLong: [
 						{
 							title: "Java Softwareentwicklerin",
 							date: "01/02/2021 - present - Gamma Innovation",
@@ -432,7 +504,7 @@ export default {
 							"<li>Gestione anagrafica dei periti interni della Banca, con eventuale processo ad hoc</li>" +
 							"<li>Monitoraggio del processo di fatturazione</li>" +
 							"<li>Nativamente integrata con gli altri sistemi banca che si interfacciano con il mondo perizie</li></ul>",
-						img: "img/perizieWeb.png",
+						img: "my-portfolio/img/perizieWeb.png",
 						reference: "https://www.gammainnovation.it/prodotti/perizie-web/"
 					},
 					{
@@ -440,7 +512,7 @@ export default {
 						subheader: "JAVA",
 						shortDescription: "TODO",
 						longDescription: "",
-						img: "img/currencyConverter.png",
+						img: "my-portfolio/img/currencyConverter.png",
 						reference: "https://www.google.com"
 					},
 					{
@@ -448,7 +520,7 @@ export default {
 						subheader: "JAVA",
 						shortDescription: "TODO",
 						longDescription: "LONG DESCRIPTION",
-						img: "img/todo.jpg",
+						img: "my-portfolio/img/todo.jpg",
 						reference: "https://www.google.com"
 					},
 				],
