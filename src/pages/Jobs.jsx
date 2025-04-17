@@ -1,8 +1,6 @@
-import { Typography, Card, CardHeader, CardContent } from '@mui/material';
-import Grid from '@mui/material/Grid2';
+import { Card, CardHeader, CardContent } from '@mui/material';
 import VerticalTimeline from '../components/timeline/VerticalTimeline.jsx';
 import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
-import SchoolIcon from '@mui/icons-material/School';
 import Avatar from '@mui/material/Avatar';
 import { useLanguage } from '../context/LanguageContext.jsx';
 

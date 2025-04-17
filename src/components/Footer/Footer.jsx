@@ -3,9 +3,12 @@ import Typography from '@mui/material/Typography';
 
 function Footer() {
 	return (
-		<Box sx={{ textAlign: 'right', marginRight: 2, padding: 1 }} >
+
+		<Box sx={{ textAlign: 'left', marginRight: 2, padding: 1 }} >
 			<Typography>&copy; {new Date().getFullYear()} - Alessia Azzolina</Typography>
+
 		</ Box>
+
 	);
 }
 

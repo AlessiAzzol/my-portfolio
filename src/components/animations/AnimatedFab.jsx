@@ -7,6 +7,7 @@ const AnimatedFab = ({ sx, onClick, children }) => {
 
 	const fabProps = useSpring({
 		transform: isHovered ? "scale(1.5)" : "scale(1)",
+
 	});
 
 	return (

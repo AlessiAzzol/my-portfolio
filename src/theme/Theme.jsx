@@ -1,4 +1,5 @@
 import { createTheme, responsiveFontSizes } from '@mui/material';
+import bck from '../assets/img/hhhorizon.svg';
 
 
 const baseTheme = createTheme({
@@ -33,9 +34,10 @@ const baseTheme = createTheme({
 		MuiFab: {
 			styleOverrides: {
 				root: ({ theme }) => ({
-					backgroundColor: theme.custom.btnColor.primary,
-					color: theme.custom.btnColor.secondary,
-
+					//backgroundColor: theme.custom.btnColor.primary,
+					color: theme.custom.btnColor.tertiary,
+					//background: `radial-gradient(circle, ${theme.custom.btnColor.secondary} 0%,  ${theme.custom.btnColor.primary} 80%)`,
+					background: `linear-gradient(45deg,${theme.custom.btnColor.secondary} 0%,  ${theme.custom.btnColor.primary} 50%,  ${theme.custom.btnColor.tertiary} 100%)`,
 				}),
 			},
 		},
@@ -43,6 +45,7 @@ const baseTheme = createTheme({
 			styleOverrides: {
 				root: ({ theme }) => ({
 					backdropFilter: 'blur(10px)',
+
 					boxShadow: 'none',
 					//boxShadow: theme.shadows[15],
 					borderRadius: 16,
@@ -53,25 +56,25 @@ const baseTheme = createTheme({
 		MuiCardHeader: {
 			styleOverrides: {
 				root: ({ theme }) => ({
-					background: theme.custom.cardBackground,
-					paddingBottom: 0,
-					borderTopLeftRadius: 16,
-					borderTopRightRadius: 16,
+					/* 	background: `${theme.custom.cardBackground}`,
+						paddingBottom: 0,
+						borderTopLeftRadius: 16,
+						borderTopRightRadius: 16, */
 
 				}),
 				title: ({ theme }) => ({
 					fontSize: '1.2rem',
 					fontWeight: 'bold',
-					color: theme.custom.iconColor.primary,
+					color: theme.custom.iconColor.secondary,
 				}),
 			},
 		},
 		MuiCardContent: {
 			styleOverrides: {
 				root: ({ theme }) => ({
-					background: theme.custom.cardBackground,
+					//background: theme.custom.cardBackground,
 					paddingBottom: 0,
-					//background: `linear-gradient(to top, ${theme.custom.cardBackground}, rgba(255, 255, 255, 0.2))`
+					//background: `radial-gradient(circle, ${theme.custom.cardBackground2} 0%,  ${theme.custom.cardBackground} 50%)`,
 
 				}),
 			}
@@ -84,6 +87,9 @@ const baseTheme = createTheme({
 					margin: 0,
 					height: 70,
 					overflow: 'visible',
+					display: 'flex',
+					justifyContent: 'flex-end',
+					alignItems: 'flex-end'
 
 				}),
 			}
@@ -130,17 +136,19 @@ const lightTheme = createTheme({
 	...baseTheme,
 	custom: {
 		iconColor: {
-			primary: 'rgb( 6, 16, 88, 1)',
-			secondary: '#F9F9F9',
+			primary: 'rgb(57, 2, 85)',
+			secondary: 'rgb(49, 8, 11)',
+
 		},
 		btnColor: {
-			primary: 'rgb( 6, 16, 88, 0.6)',
-			secondary: '#F9F9F9',
+			primary: 'rgba(255, 187, 0, 1)',
+			secondary: 'rgb(161, 16, 16)',
+			tertiary: 'rgb(255, 255, 255)',
 		},
 
-		cardBackground: 'rgba(255, 255, 255, 1)',
-		backgroundColor: 'rgba(210, 214, 217, 0.5)',
-
+		cardBackground: ' rgba(255, 255, 255, 1)',
+		backgroundColor: 'rgba(57, 2, 85, 0.1)',
+		//backgroundImage: HorizonBackground,
 	},
 
 });
@@ -152,18 +160,17 @@ const darkTheme = createTheme({
 	},
 	custom: {
 		iconColor: {
-			primary: 'rgb(163, 192, 189)',
+			primary: 'rgb(201, 202, 245)',
 			secondary: '#F9F9F9',
 		},
 		btnColor: {
-			primary: 'rgb( 163, 192, 189, 0.6)',
-			secondary: '#F9F9F9',
+			primary: 'rgb(201, 202, 245)',
+			secondary: 'rgb(112, 113, 227)',
 		},
 
-		//background: 'linear-gradient(9deg, rgba(20,40,80,1) 0%, rgba(39,73,109,1) 61%, rgba(12,123,147,1) 86%, rgba(0,168,204,1) 92%, rgba(21,174,206,1) 95%, rgba(193,218,223,1) 100%)',
-
-		cardBackground: 'rgba(40, 60, 100, 1)',
-		backgroundColor: '  rgba(20,40,80,1)',
+		cardBackground: 'rgb(3, 29, 43)',
+		cardBackground2: 'transparent',
+		//backgroundColor: '  rgba(2, 58, 85,1)',
 
 	},
 

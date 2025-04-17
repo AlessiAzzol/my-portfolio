@@ -1,12 +1,11 @@
 
-import { Typography, Card, TextField, Box, CardActions, CardHeader, CardContent, Avatar } from '@mui/material';
+import { Card, TextField, Box, CardActions, CardHeader, CardContent, Avatar } from '@mui/material';
 import { useLanguage } from '../context/LanguageContext.jsx';
 import { Button } from '@mui/material';
 import { useState } from 'react';
 import emailjs from "@emailjs/browser";
 import Grid from '@mui/material/Grid2';
 import SmsIcon from '@mui/icons-material/Sms';
-import { Padding } from '@mui/icons-material';
 
 
 function Contact() {

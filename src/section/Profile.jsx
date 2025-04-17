@@ -9,6 +9,8 @@ import Box from '@mui/material/Box';
 import AnimatedFab from '../components/animations/AnimatedFab.jsx';
 import AnimatedDialog from '../components/animations/AnimatedDialog.jsx';
 import { useState } from 'react';
+import profile from '../assets/img/profile.jpg';
+import FileDownloadIcon from '@mui/icons-material/FileDownload';
 
 function Profile(props) {
 	const { data } = useLanguage();
@@ -45,17 +47,26 @@ function Profile(props) {
 	return (
 
 		<>
+			<Box
+				component="img"
+				src={profile}
+				sx={{
+					width: '50vh',
+					height: 'auto',
+					position: 'relative',
+					borderRadius: '0% 40% 40% 0% / 0% 50% 50% 0%',
+					boxShadow: 15,
+				}}
+			/>
 			<Card sx={{
 				padding: 0,
 				position: 'fixed',
-				width: '50vh',
+				/* width: '50vh', */
 				borderRadius: '0% 50% 0% 0% / 100% 50% 50% 0%;',
-				transform: 'translate(0%, 50%)',
+				transform: 'translate(0%, -20%)',
 			}}>
 				<CardHeader
-					sx={{
-						background: `linear-gradient(to top, ${theme.custom.cardBackground}, rgba(255, 255, 255, 0.2))`,
-					}}
+
 					title={data.profile.title} subheader={data.profile.subheader} />
 				{/* <Avatar sx={{ marginTop: "-25px", marginLeft: "10px", fontFamily: 'Bonbon', fontWeight: 'bold', fontSize: 'xx-large', }}>A</Avatar> */}
 				<CardContent sx={{ padding: 0, fontSize: 7, margin: 0, borderBottomRightRadius: 16, borderBottomLeftRadius: 16, }}>
@@ -96,11 +107,11 @@ function Profile(props) {
 					}}></Box>
 
 					<AnimatedFab onClick={onButtonClick}>
-						{data.profile.iconBtn}
+						<FileDownloadIcon />
 					</AnimatedFab>
 
 				</CardActions>
-			</Card>
+			</Card >
 
 			<AnimatedDialog
 				open={openDialog}

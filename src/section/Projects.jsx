@@ -17,10 +17,8 @@ import AnimatedFab from '../components/animations/AnimatedFab.jsx';
 import { useState } from 'react';
 import AnimatedDialog from '../components/animations/AnimatedDialog.jsx';
 import Portfolio from '../pages/Portfolio.jsx';
+import CustomCard from '../components/card/CustomCard.jsx';
 
-function rand(min, max) {
-	return Math.floor(Math.random() * (max - min + 1) + min);
-}
 
 
 
@@ -32,7 +30,7 @@ function Projects() {
 
 
 	return (
-		<Card>
+		<CustomCard>
 			<CardContent sx={{ borderBottomRightRadius: 20, }} >
 				<Swiper
 					modules={[Autoplay,]}
@@ -55,47 +53,29 @@ function Projects() {
 				</Swiper >
 
 			</CardContent>
-			<CardActions>
-				<Box sx={{
-					'--bck': (theme) => theme.custom.cardBackground,
-					width: '85%',
-					height: '100%',
-					background: 'var(--bck)',
-					borderBottomRightRadius: 20,
-					position: 'relative',
-					'&::before': {
-						content: '""',
-						position: 'absolute',
-						backgroundColor: 'transparent',
-						right: '-60px',
-						height: '35px',
-						width: '60px',
-						borderTopLeftRadius: 30,
-						boxShadow: ' -30px 0 0 0 var(--bck)',
-					}
-				}}>
-					<CardHeader sx={{ borderBottomRightRadius: 20, background: 'transparent', }}
-						avatar={<Avatar><WorkIcon /></Avatar>}
-						title={data.pages.portfolio.subtitle}
-					/>
-				</Box>
+			<CardActions sx={{ justifyContent: 'space-between', }}>
+				<CardHeader
+					avatar={<Avatar><WorkIcon /></Avatar>}
+					title={data.pages.portfolio.subtitle}
+				/>
+
 				<AnimatedFab onClick={handleDialog}>
 					<AddIcon />
 				</AnimatedFab>
-
-
-				<AnimatedDialog
-					open={openDialog}
-					onClick={handleDialog}
-				>
-					<Portfolio />
-
-				</AnimatedDialog>
-
-
 			</CardActions >
 
-		</Card>
+			<AnimatedDialog
+				open={openDialog}
+				onClick={handleDialog}
+			>
+				<Portfolio />
+
+			</AnimatedDialog>
+
+
+
+
+		</CustomCard>
 
 
 	);
