@@ -6,7 +6,7 @@ function About() {
 	const { data } = useLanguage();
 
 	return (
-		<Card sx={{ height: '100%', }}>
+		<Card sx={{ height: '100%', paddingRight: 3 }}>
 			<CardHeader sx={{ background: 'transparent', }}
 				avatar={<Avatar sx={{ fontFamily: 'Bonbon', fontWeight: 'bold', fontSize: 'xx-large', }}>A</Avatar>}
 				title={data.pages.home.section1.title}

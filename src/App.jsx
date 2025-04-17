@@ -4,7 +4,6 @@ import ThemeProviderWrapper from './context/ThemeContext.jsx';
 import { LanguageProvider } from './context/LanguageContext.jsx';
 import Grid from '@mui/material/Grid2';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Footer from './components/footer/Footer.jsx';
 import Profile from './section/Profile.jsx';
 import Language from './section/Language.jsx';
 import Education from './section/Education.jsx';
@@ -14,27 +13,9 @@ import Mode from './section/Mode.jsx';
 import Projects from './section/Projects.jsx';
 import WorkExperience from './section/WorkExperience.jsx';
 import About from './section/About.jsx';
-import Box from '@mui/material/Box';
-import data from './data/resumeData.jsx';
 import { useMediaQuery, useTheme } from '@mui/material';
 import Home_sm from './section/Home_sm.jsx';
-import CustomCard from './components/card/CustomCard.jsx';
 
-const HorizonBackground = () => (
-	<Box
-		dangerouslySetInnerHTML={{ __html: data.background }}
-		style={{
-			position: 'fixed',
-			top: 0,
-			left: 0,
-			width: '100vw',
-			height: '100vh',
-			zIndex: -1,
-			pointerEvents: 'none',
-		}}
-	/>
-
-);
 
 
 function App() {
@@ -47,7 +28,7 @@ function App() {
 
 				<CssBaseline />
 
-				<HorizonBackground />
+
 				{big && (
 					<Grid container size={12} spacing={1}
 						sx={{
@@ -55,9 +36,6 @@ function App() {
 							display: "flex",
 							justifyContent: "center",
 							backgroundColor: (theme) => theme.custom.backgroundColor,
-							//backgroundImage: HorizonBackground,
-							//backgroundRepeat: 'no-repeat',
-							//backgroundOpacity: 0.1,
 							backgroundPosition: 'center',
 							backgroundSize: 'contain',
 							overflow: "auto",

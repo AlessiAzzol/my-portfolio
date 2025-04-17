@@ -4,7 +4,6 @@ import SchoolIcon from '@mui/icons-material/School';
 import Avatar from '@mui/material/Avatar';
 import { useLanguage } from '../context/LanguageContext.jsx';
 import AddIcon from '@mui/icons-material/Add';
-import Box from '@mui/material/Box';
 import AnimatedFab from '../components/animations/AnimatedFab.jsx';
 import Studies from '../pages/Studies.jsx';
 import { useState } from 'react';

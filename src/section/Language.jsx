@@ -17,10 +17,12 @@ function Language() {
 			onMouseEnter={() => setHover(true)}
 			onMouseLeave={() => setHover(false)}
 			sx={{
+				//position: 'absolute',
+				zIndex: 2,
 				padding: 2,
 				display: 'flex',
-				justifyContent: 'flex-around',
-				alignItems: 'center',
+				justifyContent: 'flex-end',
+				alignItems: 'flex-end',
 				cursor: 'pointer',
 				borderRadius: 15,
 				boxShadow: 15
@@ -56,12 +58,6 @@ function Language() {
 					</AnimatedFab>
 				))}
 			</Grid>
-
-
-
-
-
-
 		</ Card >
 
 

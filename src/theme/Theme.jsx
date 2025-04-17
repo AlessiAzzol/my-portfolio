@@ -33,9 +33,8 @@ const baseTheme = createTheme({
 		MuiFab: {
 			styleOverrides: {
 				root: ({ theme }) => ({
-					//backgroundColor: theme.custom.btnColor.primary,
 					color: theme.custom.btnColor.tertiary,
-					//background: `radial-gradient(circle, ${theme.custom.btnColor.secondary} 0%,  ${theme.custom.btnColor.primary} 80%)`,
+					borderTopRightRadius: '15%',
 					background: `linear-gradient(45deg,${theme.custom.btnColor.secondary} 0%,  ${theme.custom.btnColor.primary} 50%,  ${theme.custom.btnColor.tertiary} 100%)`,
 				}),
 			},
@@ -43,37 +42,27 @@ const baseTheme = createTheme({
 		MuiCard: {
 			styleOverrides: {
 				root: ({ theme }) => ({
-					backdropFilter: 'blur(10px)',
-
+					//backdropFilter: 'blur(10px)',
 					boxShadow: 'none',
-					//boxShadow: theme.shadows[15],
-					borderRadius: 16,
 					background: 'transparent',
 				}),
 			}
 		},
 		MuiCardHeader: {
 			styleOverrides: {
-				root: ({ theme }) => ({
-					/* 	background: `${theme.custom.cardBackground}`,
-						paddingBottom: 0,
-						borderTopLeftRadius: 16,
-						borderTopRightRadius: 16, */
-
-				}),
 				title: ({ theme }) => ({
-					fontSize: '1.2rem',
+					fontSize: '1.5rem',
 					fontWeight: 'bold',
 					color: theme.custom.iconColor.secondary,
+					fontFamily: 'Indie Flower',
+					fontStyle: 'normal',
 				}),
 			},
 		},
 		MuiCardContent: {
 			styleOverrides: {
 				root: ({ theme }) => ({
-					//background: theme.custom.cardBackground,
 					paddingBottom: 0,
-					//background: `radial-gradient(circle, ${theme.custom.cardBackground2} 0%,  ${theme.custom.cardBackground} 50%)`,
 
 				}),
 			}
@@ -121,7 +110,7 @@ const baseTheme = createTheme({
 		MuiAvatar: {
 			styleOverrides: {
 				root: ({ theme }) => ({
-					backgroundColor: theme.custom.iconColor.primary,
+					backgroundImage: `linear-gradient(to right,${theme.custom.iconColor.primary},  ${theme.custom.iconColor.secondary})`,
 				}),
 			}
 		},
@@ -135,19 +124,23 @@ const lightTheme = createTheme({
 	...baseTheme,
 	custom: {
 		iconColor: {
-			primary: 'rgb(57, 2, 85)',
-			secondary: 'rgb(49, 8, 11)',
+			primary: 'rgb(252, 113, 22)',
+			secondary: 'rgb(116, 12, 2)',
 
 		},
 		btnColor: {
-			primary: 'rgba(255, 187, 0, 1)',
-			secondary: 'rgb(161, 16, 16)',
+			primary: '#037387',
+			secondary: '#0DD2C8',
 			tertiary: 'rgb(255, 255, 255)',
 		},
+		svgColor: {
+			primary: '#FC7116',
+			secondary: '#FDB000',
+		},
 
-		cardBackground: ' rgba(255, 255, 255, 1)',
-		backgroundColor: 'rgba(57, 2, 85, 0.1)',
-		//backgroundImage: HorizonBackground,
+		cardBackground: 'rgba(255, 255, 255, 1)',
+		backgroundColor: 'rgba(3, 115, 135, 0.1)',
+		highlight: 'rgba(255, 255, 0, 0.5)',
 	},
 
 });
@@ -166,10 +159,14 @@ const darkTheme = createTheme({
 			primary: 'rgb(201, 202, 245)',
 			secondary: 'rgb(112, 113, 227)',
 		},
+		svgColor: {
+			primary: 'rgba(255, 255, 0, 1)',
+			secondary: 'rgba(255, 255, 0, 1)',
+		},
 
-		cardBackground: 'rgb(3, 29, 43)',
-		cardBackground2: 'transparent',
-		//backgroundColor: '  rgba(2, 58, 85,1)',
+		cardBackground: 'rgb(8, 34, 233)',
+		backgroundColor: 'rgb(0, 28, 75)',
+		highlight: 'rgba(255, 255, 0, 1)',
 
 	},
 
