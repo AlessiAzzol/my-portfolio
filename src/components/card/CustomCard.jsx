@@ -9,16 +9,16 @@ function CustomCard({ children }) {
 	const [size, setSize] = useState({ width: 0, height: 0 });
 
 	useEffect(() => {
-		function updateSize() {
-			if (svgRef.current) {
-				const { width, height } = svgRef.current.getBoundingClientRect();
-				setSize({ width, height });
-			}
-		}
-		updateSize();
+		if (!svgRef.current) return;
 
-		window.addEventListener('resize', updateSize);
-		return () => window.removeEventListener('resize', updateSize);
+		const observer = new ResizeObserver(([entry]) => {
+			const { width, height } = entry.contentRect;
+			setSize({ width, height });
+		});
+
+		observer.observe(svgRef.current);
+
+		return () => observer.disconnect();
 	}, []);
 
 	const { width, height } = size;
@@ -48,7 +48,7 @@ function CustomCard({ children }) {
 		>
 			<Box
 				component="svg"
-				preserveAspectRatio="xMaxYMax meet"
+				preserveAspectRatio="XMaxYMax meet"
 				sx={{
 					position: 'absolute',
 					width: '100%',

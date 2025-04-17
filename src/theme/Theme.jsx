@@ -1,5 +1,4 @@
 import { createTheme, responsiveFontSizes } from '@mui/material';
-import bck from '../assets/img/hhhorizon.svg';
 
 
 const baseTheme = createTheme({
