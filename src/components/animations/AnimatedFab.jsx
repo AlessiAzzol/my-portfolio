@@ -9,7 +9,6 @@ const AnimatedFab = ({ sx, onClick, children }) => {
 		transform: isHovered ? "scale(1.5)" : "scale(1)",
 
 	});
-
 	return (
 		<animated.div style={fabProps}>
 			<Fab

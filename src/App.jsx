@@ -51,7 +51,7 @@ function App() {
 
 						</Grid>
 
-						<Grid container size={{ sm: 6, md: 8, lg: 9 }} spacing={1} sx={{ padding: 1, paddingRight: 4 }} >
+						<Grid container size={{ sm: 6, md: 8, lg: 9 }} spacing={{ sm: 4, lg: 1 }} sx={{ padding: 1, paddingRight: 4 }} >
 
 							<Grid size={{ sm: 12, md: 4, }} >
 								<About />
@@ -67,18 +67,18 @@ function App() {
 								<Education />
 
 							</Grid>
-							<Grid container size={{ sm: 12, md: 7, }} >
+							<Grid container size={{ sm: 12, md: 7, }}    >
 								<Grid size={{ md: 10, }} >
 									<WorkExperience />
 								</Grid>
 								<Grid container size={{ md: 2, }} direction={"column"}>
-
-									<Grid size={{ xs: 12, }} >
-										<Language></Language>
-									</Grid>
 									<Grid size={{ xs: 12, }} >
 										<Mode />
 									</Grid>
+									<Grid size={{ xs: 12, }} >
+										<Language></Language>
+									</Grid>
+
 
 								</Grid>
 								<Grid size={{ xs: 12, }} >

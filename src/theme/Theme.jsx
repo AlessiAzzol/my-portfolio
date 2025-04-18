@@ -124,18 +124,18 @@ const lightTheme = createTheme({
 	...baseTheme,
 	custom: {
 		iconColor: {
-			primary: 'rgb(252, 113, 22)',
+			primary: 'rgb(252, 114, 22)',
 			secondary: 'rgb(116, 12, 2)',
 
 		},
 		btnColor: {
-			primary: '#037387',
-			secondary: '#0DD2C8',
+			primary: 'rgb(3, 115, 135)',
+			secondary: 'rgb(13, 210, 200)',
 			tertiary: 'rgb(255, 255, 255)',
 		},
 		svgColor: {
-			primary: '#FC7116',
-			secondary: '#FDB000',
+			primary: 'rgb(252, 114, 22)',
+			secondary: 'rgb(253, 176, 0)',
 		},
 
 		cardBackground: 'rgba(255, 255, 255, 1)',
@@ -152,21 +152,22 @@ const darkTheme = createTheme({
 	},
 	custom: {
 		iconColor: {
-			primary: 'rgb(201, 202, 245)',
-			secondary: '#F9F9F9',
+			primary: 'rgb(252, 114, 22)',
+			secondary: 'rgba(255, 255, 0, 1)',
 		},
 		btnColor: {
-			primary: 'rgb(201, 202, 245)',
-			secondary: 'rgb(112, 113, 227)',
+			primary: 'rgb(111, 39, 58)',
+			secondary: 'rgb(161, 58, 85)',
+			tertiary: 'rgb(243, 198, 210)',
 		},
 		svgColor: {
 			primary: 'rgba(255, 255, 0, 1)',
 			secondary: 'rgba(255, 255, 0, 1)',
 		},
 
-		cardBackground: 'rgb(8, 34, 233)',
+		cardBackground: 'rgba(161, 58, 85, 0.4)',
 		backgroundColor: 'rgb(0, 28, 75)',
-		highlight: 'rgba(255, 255, 0, 1)',
+		highlight: 'rgba(255, 187, 0, 0.8)',
 
 	},
 

@@ -31,7 +31,7 @@ function Projects() {
 
 	return (
 		<CustomCard>
-			<CardContent sx={{ borderBottomRightRadius: 20, }} >
+			<CardContent >
 				<Swiper
 					modules={[Autoplay,]}
 					loop={true}
